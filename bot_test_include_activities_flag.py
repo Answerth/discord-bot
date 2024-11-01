@@ -3,7 +3,7 @@ import signal
 import discord
 from discord.ext import commands
 from discord import app_commands, Embed
-from stat_checker.check_stats import fetch_player_stats
+from cogs.stat_checker.check_stats import fetch_player_stats
 import io
 import re  # For potential future use with as_file functionality
 
