@@ -2,3 +2,5 @@ Traceback (most recent call last):
   File "/home/discordbeta/discordbot10s/bot_test_include_activities_flag.py", line 6, in <module>
     from stat_checker.check_stats import fetch_player_stats
 ModuleNotFoundError: No module named 'stat_checker'
+[2024-11-01 21:52:42] [INFO    ] discord.client: logging in using static token
+[2024-11-01 21:52:43] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0c2d3183060b71246bc39f6edce89cd4).

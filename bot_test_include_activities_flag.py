@@ -3,7 +3,7 @@ import signal
 import discord
 from discord.ext import commands
 from discord import app_commands, Embed
-from cogs.stat_checker.check_stats import fetch_player_stats
+from cogs.clan_members.get_clan_members import fetch_clan_members, get_member_activities
 import io
 import re  # For potential future use with as_file functionality
 
@@ -109,6 +109,29 @@ async def ping(ctx):
 async def ping_slash(interaction: discord.Interaction):
     """Slash command that responds with 'Pong!'."""
     await interaction.response.send_message("Pong!")
+
+
+@bot.tree.command(name="activity")
+@app_commands.describe(username="The RuneScape username to fetch activities for")
+async def activity(interaction: discord.Interaction, username: str, qty_max_10_atm: int = 5):
+    await interaction.response.defer()  # Prevents timeout while processing
+
+    # Fetch recent activities for the specified user
+    member_data = get_member_activities(username, qty_max_10_atm)
+
+    # Format activities as an embed for Discord
+    embed = Embed(title=f"Recent Activities for {member_data['name']}", color=discord.Color.blue())
+
+    if not member_data["activities"]:
+        embed.description = "No recent activities found within the last 30 days."
+    else:
+        activity_text = "\n".join(
+            f"- **{activity['date']}**: {activity['details']}"
+            for activity in member_data["activities"]
+        )
+        embed.add_field(name="Activities", value=activity_text, inline=False)
+
+    await interaction.followup.send(embed=embed)
 
 @bot.command(name="checkstats")
 async def check_stats(ctx, *, args: str):
