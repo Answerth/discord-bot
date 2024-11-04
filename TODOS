@@ -28,4 +28,6 @@
 --statschecker stored over time - weekly? 
 --- use ge price data protocol
 
+-investigate world60pengs.com tool
 
+-create generic modules for database updaters, discord alerters, file posters, form creators and the like
