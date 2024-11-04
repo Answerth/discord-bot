@@ -1,0 +1,88 @@
+import os
+import json
+import pandas as pd
+from sqlalchemy import create_engine, Table, MetaData, select
+from sqlalchemy.exc import SQLAlchemyError
+
+# Load database configuration from dbconfig.json in the parent directory
+config_path = os.path.join(os.path.expanduser("~"), 'discordbot10s', 'dbconfig.json')
+with open(config_path) as config_file:
+    config = json.load(config_file)
+
+# Create the SQLAlchemy engine using the loaded configuration
+engine = create_engine(f"postgresql://{config['username']}:{config['password']}@{config['host']}:{config['port']}/{config['database']}")
+
+def log_message(message, row_data=None):
+    """Logs informational messages with optional row data for context."""
+    print("INFO:", message)
+    if row_data is not None:
+        print("Row Data:", row_data)
+
+def log_error(error_message, row_data=None):
+    """Logs error messages with optional row data for context."""
+    print("ERROR:", error_message)
+    if row_data is not None:
+        print("Row Data:", row_data)
+
+def adjust_dataframe_structure(df, table_columns):
+    """Ensures the DataFrame structure aligns with the database table columns."""
+    # Add missing columns with default values
+    for col in table_columns:
+        if col not in df.columns:
+            if col == "id":
+                continue  # Skip adding 'id' since it’s an auto-increment field
+            df[col] = None  # Assign default None or any appropriate default value
+    
+    # Remove any extra columns that are not part of the table
+    df = df[[col for col in df.columns if col in table_columns]]
+    
+    return df
+
+def insert_data(engine, df, table_name, unique_column):
+    # Reflect the table structure
+    metadata = MetaData()
+    table = Table(table_name, metadata, autoload_with=engine)
+    table_columns = [column.name for column in table.columns]
+
+    # Adjust DataFrame structure
+    df = adjust_dataframe_structure(df, table_columns)
+
+    with engine.connect() as conn:
+        for _, row in df.iterrows():
+            try:
+                # Check if the row already exists based on the unique column
+                select_stmt = select(table).where(table.c[unique_column] == row[unique_column])
+                result = conn.execute(select_stmt).fetchone()
+
+                # Insert only if the row does not exist
+                if result is None:
+                    insert_stmt = table.insert().values(**row.to_dict())
+                    conn.execute(insert_stmt)
+                    log_message(f"Inserted row for {unique_column}: {row[unique_column]}")
+                    
+                    # Verify the row was added
+                    verify_result = conn.execute(select_stmt).fetchone()
+                    if verify_result:
+                        log_message(f"Row successfully written to '{table_name}' table:", row.to_dict())
+                    else:
+                        log_error(f"Failed to write row to '{table_name}' table:", row.to_dict())
+                else:
+                    log_message(f"Skipping duplicate row for {unique_column}: {row[unique_column]}")
+            except SQLAlchemyError as e:
+                log_error(f"Database error while inserting row for {unique_column}: {row[unique_column]}", row.to_dict())
+                log_error(str(e))
+
+# Load data from the pickle files
+data_dir = os.path.dirname(__file__)
+members_df = pd.read_pickle(os.path.join(data_dir, "members_data.pkl"))
+activities_df = pd.read_pickle(os.path.join(data_dir, "activities_data.pkl"))
+
+# Adjust column names to match the database structure
+members_df = members_df.rename(columns={"name": "name"})  # Ensure correct renaming if needed
+activities_df = activities_df.rename(columns={"name": "member_name"})
+
+# Insert the data into the respective tables
+insert_data(engine, members_df, 'members', unique_column="name")
+insert_data(engine, activities_df, 'activities', unique_column="member_name")
+
+print("Data insertion process completed.")

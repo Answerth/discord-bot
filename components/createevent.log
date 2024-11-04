@@ -1,0 +1,8 @@
+2024-11-02 20:51:49,387:INFO:components.createevent: 'events_data' already exists for the bot
+2024-11-02 20:51:49,388:DEBUG:asyncio: Using selector: EpollSelector
+2024-11-02 20:51:49,389:INFO:discord.client: logging in using static token
+2024-11-02 20:51:50,071:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 9db332de64ca8446df9b636529336c47).
+2024-11-02 20:53:22,921:INFO:components.createevent: 'events_data' already exists for the bot
+2024-11-02 20:53:22,922:DEBUG:asyncio: Using selector: EpollSelector
+2024-11-02 20:53:22,923:INFO:discord.client: logging in using static token
+2024-11-02 20:53:23,642:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 32fc87fa9644358007f3db4deddf5c21).

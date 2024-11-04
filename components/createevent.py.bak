@@ -1,0 +1,651 @@
+# ~/discordbot10s/components/createevent.py
+
+import discord
+from discord.ext import commands
+from discord import app_commands
+from datetime import datetime
+import pytz  # To handle timezones with conventional names
+
+# Ensure you have pytz installed. If not, install it via:
+# pip install pytz
+
+class CreateEvent(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+
+    @app_commands.command(name="createevent", description="Create a new event with interactive components")
+    async def create_event(self, interaction: discord.Interaction):
+        """Slash command to create a new event."""
+        await interaction.response.send_message(
+            "Choose the type of event you want to create:",
+            view=EventTypeView(self.bot, interaction.user),
+            ephemeral=True
+        )
+
+class EventTypeView(discord.ui.View):
+    def __init__(self, bot, user):
+        super().__init__(timeout=300)  # Timeout after 5 minutes of inactivity
+        self.bot = bot
+        self.user = user
+
+        # Event Type Select Menu
+        self.add_item(EventTypeSelect(bot, user))
+
+class EventTypeSelect(discord.ui.Select):
+    def __init__(self, bot, user):
+        options = [
+            discord.SelectOption(label="Boss Encounter", value="boss_encounter", description="Predefined boss events."),
+            discord.SelectOption(label="Custom", value="custom", description="Create a custom event."),
+        ]
+        super().__init__(
+            placeholder="Select Event Type",
+            min_values=1,
+            max_values=1,
+            options=options
+        )
+        self.bot = bot
+        self.user = user
+
+    async def callback(self, interaction: discord.Interaction):
+        selected = self.values[0]
+
+        # Initialize event data storage for the user
+        if self.user.id not in self.bot.events_data:
+            self.bot.events_data[self.user.id] = {}
+
+        if selected == 'boss_encounter':
+            # Proceed to select a boss
+            await interaction.response.edit_message(
+                content="Select the boss encounter:",
+                view=BossSelectView(self.bot, self.user)
+            )
+            self.bot.events_data[self.user.id]['event_type'] = 'Boss Encounter'
+        elif selected == 'custom':
+            # Open a modal to input custom title
+            await interaction.response.send_modal(CustomTitleModal(self.bot, self.user))
+
+class BossSelectView(discord.ui.View):
+    def __init__(self, bot, user):
+        super().__init__(timeout=300)
+        self.bot = bot
+        self.user = user
+
+        # Boss Select Menu
+        self.add_item(BossSelect(bot, user))
+
+class BossSelect(discord.ui.Select):
+    def __init__(self, bot, user):
+        # Predefined list of bosses
+        bosses = [
+            discord.SelectOption(label="Dragon Lord", value="dragon_lord"),
+            discord.SelectOption(label="Shadow Beast", value="shadow_beast"),
+            discord.SelectOption(label="Titan Guardian", value="titan_guardian"),
+            # Add more bosses as needed
+        ]
+        super().__init__(
+            placeholder="Select a Boss Encounter",
+            min_values=1,
+            max_values=1,
+            options=bosses
+        )
+        self.bot = bot
+        self.user = user
+
+    async def callback(self, interaction: discord.Interaction):
+        selected_boss = self.values[0].replace('_', ' ').title()
+
+        # Store the selected boss
+        self.bot.events_data[self.user.id]['event_title'] = selected_boss
+
+        # Proceed to time selection
+        await interaction.response.edit_message(
+            content="Select the date and time for the event:",
+            view=TimeSelectionView(self.bot, self.user)
+        )
+
+class CustomTitleModal(discord.ui.Modal, title="Custom Event Title"):
+    event_title = discord.ui.TextInput(
+        label="Enter the event title",
+        placeholder="Event Title",
+        max_length=100,
+        required=True
+    )
+
+    def __init__(self, bot, user):
+        super().__init__()
+        self.bot = bot
+        self.user = user
+
+    async def on_submit(self, interaction: discord.Interaction):
+        custom_title = self.event_title.value.strip()
+
+        # Store the custom title
+        self.bot.events_data[self.user.id]['event_title'] = custom_title
+
+        # Proceed to time selection
+        await interaction.response.send_message(
+            "Select the date and time for the event:",
+            view=TimeSelectionView(self.bot, self.user),
+            ephemeral=True
+        )
+
+class TimeSelectionView(discord.ui.View):
+    def __init__(self, bot, user):
+        super().__init__(timeout=300)
+        self.bot = bot
+        self.user = user
+
+        # Add Day, Month, Year, Timezone Selects
+        self.add_item(DaySelect(bot, user))
+        self.add_item(MonthSelect(bot, user))
+        self.add_item(YearSelect(bot, user))
+        self.add_item(TimezoneSelect(bot, user))
+
+    async def disable_all_items(self):
+        for item in self.children:
+            item.disabled = True
+        await self.message.edit(view=self)
+
+class DaySelect(discord.ui.Select):
+    def __init__(self, bot, user):
+        options = [discord.SelectOption(label=str(day), value=str(day)) for day in range(1, 32)]
+        super().__init__(
+            placeholder="Select Day",
+            min_values=1,
+            max_values=1,
+            options=options
+        )
+        self.bot = bot
+        self.user = user
+
+    async def callback(self, interaction: discord.Interaction):
+        selected_day = self.values[0]
+        self.bot.events_data[self.user.id]['day'] = selected_day
+        await interaction.response.send_message(f"Day selected: {selected_day}", ephemeral=True)
+        await self.check_completion(interaction)
+
+    async def check_completion(self, interaction: discord.Interaction):
+        event = self.bot.events_data.get(self.user.id, {})
+        if all(k in event for k in ('day', 'month', 'year', 'timezone')):
+            # Proceed to number of participants
+            await interaction.message.edit(
+                content="All date and time components selected. Please enter the number of participants:",
+                view=ParticipantsInputView(self.bot, self.user)
+            )
+
+class MonthSelect(discord.ui.Select):
+    def __init__(self, bot, user):
+        months = [
+            discord.SelectOption(label="January", value="1"),
+            discord.SelectOption(label="February", value="2"),
+            discord.SelectOption(label="March", value="3"),
+            discord.SelectOption(label="April", value="4"),
+            discord.SelectOption(label="May", value="5"),
+            discord.SelectOption(label="June", value="6"),
+            discord.SelectOption(label="July", value="7"),
+            discord.SelectOption(label="August", value="8"),
+            discord.SelectOption(label="September", value="9"),
+            discord.SelectOption(label="October", value="10"),
+            discord.SelectOption(label="November", value="11"),
+            discord.SelectOption(label="December", value="12"),
+        ]
+        super().__init__(
+            placeholder="Select Month",
+            min_values=1,
+            max_values=1,
+            options=months
+        )
+        self.bot = bot
+        self.user = user
+
+    async def callback(self, interaction: discord.Interaction):
+        selected_month = self.values[0]
+        month_name = datetime.strptime(selected_month, "%m").strftime("%B")
+        self.bot.events_data[self.user.id]['month'] = selected_month
+        await interaction.response.send_message(f"Month selected: {month_name}", ephemeral=True)
+        await self.check_completion(interaction)
+
+    async def check_completion(self, interaction: discord.Interaction):
+        event = self.bot.events_data.get(self.user.id, {})
+        if all(k in event for k in ('day', 'month', 'year', 'timezone')):
+            # Proceed to number of participants
+            await interaction.message.edit(
+                content="All date and time components selected. Please enter the number of participants:",
+                view=ParticipantsInputView(self.bot, self.user)
+            )
+
+class YearSelect(discord.ui.Select):
+    def __init__(self, bot, user):
+        current_year = datetime.now().year
+        years = [discord.SelectOption(label=str(year), value=str(year)) for year in range(current_year, current_year + 5)]
+        super().__init__(
+            placeholder="Select Year",
+            min_values=1,
+            max_values=1,
+            options=years
+        )
+        self.bot = bot
+        self.user = user
+
+    async def callback(self, interaction: discord.Interaction):
+        selected_year = self.values[0]
+        self.bot.events_data[self.user.id]['year'] = selected_year
+        await interaction.response.send_message(f"Year selected: {selected_year}", ephemeral=True)
+        await self.check_completion(interaction)
+
+    async def check_completion(self, interaction: discord.Interaction):
+        event = self.bot.events_data.get(self.user.id, {})
+        if all(k in event for k in ('day', 'month', 'year', 'timezone')):
+            # Proceed to number of participants
+            await interaction.message.edit(
+                content="All date and time components selected. Please enter the number of participants:",
+                view=ParticipantsInputView(self.bot, self.user)
+            )
+
+class TimezoneSelect(discord.ui.Select):
+    def __init__(self, bot, user):
+        # Mapping UTC offsets to pytz timezone names
+        # This is a simplified mapping and may require adjustments for accurate DST handling
+        timezone_map = {
+            "UTC-12": "Etc/GMT+12",
+            "UTC-11": "Etc/GMT+11",
+            "UTC-10": "Pacific/Honolulu",
+            "UTC-9": "America/Anchorage",
+            "UTC-8": "America/Los_Angeles",
+            "UTC-7": "America/Denver",
+            "UTC-6": "America/Chicago",
+            "UTC-5": "America/New_York",
+            "UTC-4": "America/Halifax",
+            "UTC-3": "America/Argentina/Buenos_Aires",
+            "UTC-2": "Atlantic/South_Georgia",
+            "UTC-1": "Atlantic/Azores",
+            "UTC+0": "Etc/UTC",
+            "UTC+1": "Europe/Berlin",
+            "UTC+2": "Europe/Athens",
+            "UTC+3": "Europe/Moscow",
+            "UTC+4": "Asia/Dubai",
+            "UTC+5": "Asia/Karachi",
+            "UTC+6": "Asia/Dhaka",
+            "UTC+7": "Asia/Bangkok",
+            "UTC+8": "Asia/Shanghai",
+            "UTC+9": "Asia/Tokyo",
+            "UTC+10": "Australia/Sydney",
+            "UTC+11": "Pacific/Guadalcanal",
+            "UTC+12": "Pacific/Auckland",
+            "UTC+13": "Pacific/Tongatapu",
+            "UTC+14": "Pacific/Kiritimati",
+        }
+
+        # Mapping UTC offsets to conventional timezone names
+        timezone_name_map = {
+            "UTC-12": "International Date Line West",
+            "UTC-11": "Samoa Time",
+            "UTC-10": "Hawaii-Aleutian Time",
+            "UTC-9": "Alaska Time",
+            "UTC-8": "Pacific Time",
+            "UTC-7": "Mountain Time",
+            "UTC-6": "Central Time",
+            "UTC-5": "Eastern Time",
+            "UTC-4": "Atlantic Time",
+            "UTC-3": "Argentina Time",
+            "UTC-2": "South Georgia & the South Sandwich Islands",
+            "UTC-1": "Azores",
+            "UTC+0": "Greenwich Mean Time",
+            "UTC+1": "Central European Time",
+            "UTC+2": "Eastern European Time",
+            "UTC+3": "Moscow Time",
+            "UTC+4": "Gulf Standard Time",
+            "UTC+5": "Pakistan Standard Time",
+            "UTC+6": "Bangladesh Standard Time",
+            "UTC+7": "Indochina Time",
+            "UTC+8": "China Standard Time",
+            "UTC+9": "Japan Standard Time",
+            "UTC+10": "Australian Eastern Standard Time",
+            "UTC+11": "Solomon Islands Time",
+            "UTC+12": "New Zealand Standard Time",
+            "UTC+13": "Tonga Time",
+            "UTC+14": "Line Islands Time",
+        }
+
+        options = [discord.SelectOption(label=f"{name} ({utc})", value=utc) for utc, name in timezone_name_map.items()]
+        super().__init__(
+            placeholder="Select Timezone",
+            min_values=1,
+            max_values=1,
+            options=options
+        )
+        self.bot = bot
+        self.user = user
+
+    async def callback(self, interaction: discord.Interaction):
+        selected_timezone = self.values[0]
+        self.bot.events_data[self.user.id]['timezone'] = selected_timezone
+
+        # Get the corresponding pytz timezone
+        pytz_timezone = {
+            "UTC-12": "Etc/GMT+12",
+            "UTC-11": "Etc/GMT+11",
+            "UTC-10": "Pacific/Honolulu",
+            "UTC-9": "America/Anchorage",
+            "UTC-8": "America/Los_Angeles",
+            "UTC-7": "America/Denver",
+            "UTC-6": "America/Chicago",
+            "UTC-5": "America/New_York",
+            "UTC-4": "America/Halifax",
+            "UTC-3": "America/Argentina/Buenos_Aires",
+            "UTC-2": "Atlantic/South_Georgia",
+            "UTC-1": "Atlantic/Azores",
+            "UTC+0": "Etc/UTC",
+            "UTC+1": "Europe/Berlin",
+            "UTC+2": "Europe/Athens",
+            "UTC+3": "Europe/Moscow",
+            "UTC+4": "Asia/Dubai",
+            "UTC+5": "Asia/Karachi",
+            "UTC+6": "Asia/Dhaka",
+            "UTC+7": "Asia/Bangkok",
+            "UTC+8": "Asia/Shanghai",
+            "UTC+9": "Asia/Tokyo",
+            "UTC+10": "Australia/Sydney",
+            "UTC+11": "Pacific/Guadalcanal",
+            "UTC+12": "Pacific/Auckland",
+            "UTC+13": "Pacific/Tongatapu",
+            "UTC+14": "Pacific/Kiritimati",
+        }.get(selected_timezone, "Etc/UTC")
+
+        timezone_obj = pytz.timezone(pytz_timezone)
+        now = datetime.now(timezone_obj)
+        is_dst = bool(now.dst())
+
+        # Adjust the timezone name based on DST
+        if is_dst:
+            # Example: 'Pacific Daylight Time'
+            timezone_name_map = {
+                "Etc/GMT+12": "UTC-12 (International Date Line West)",
+                "Etc/GMT+11": "UTC-11 (Samoa Time)",
+                "Pacific/Honolulu": "UTC-10 (Hawaii Standard Time)",
+                "America/Anchorage": "UTC-9 (Alaska Daylight Time)",
+                "America/Los_Angeles": "UTC-8 (Pacific Daylight Time)",
+                "America/Denver": "UTC-7 (Mountain Daylight Time)",
+                "America/Chicago": "UTC-6 (Central Daylight Time)",
+                "America/New_York": "UTC-5 (Eastern Daylight Time)",
+                "America/Halifax": "UTC-4 (Atlantic Daylight Time)",
+                "America/Argentina/Buenos_Aires": "UTC-3 (Argentina Time)",
+                "Atlantic/South_Georgia": "UTC-2 (South Georgia & the South Sandwich Islands)",
+                "Atlantic/Azores": "UTC-1 (Azores Daylight Time)",
+                "Etc/UTC": "UTC+0 (Greenwich Mean Time)",
+                "Europe/Berlin": "UTC+1 (Central European Summer Time)",
+                "Europe/Athens": "UTC+2 (Eastern European Summer Time)",
+                "Europe/Moscow": "UTC+3 (Moscow Standard Time)",
+                "Asia/Dubai": "UTC+4 (Gulf Standard Time)",
+                "Asia/Karachi": "UTC+5 (Pakistan Standard Time)",
+                "Asia/Dhaka": "UTC+6 (Bangladesh Standard Time)",
+                "Asia/Bangkok": "UTC+7 (Indochina Time)",
+                "Asia/Shanghai": "UTC+8 (China Standard Time)",
+                "Asia/Tokyo": "UTC+9 (Japan Standard Time)",
+                "Australia/Sydney": "UTC+10 (Australian Eastern Daylight Time)",
+                "Pacific/Guadalcanal": "UTC+11 (Solomon Islands Time)",
+                "Pacific/Auckland": "UTC+12 (New Zealand Daylight Time)",
+                "Pacific/Tongatapu": "UTC+13 (Tonga Time)",
+                "Pacific/Kiritimati": "UTC+14 (Line Islands Time)",
+            }
+
+            timezone_name = timezone_name_map.get(pytz_timezone, f"{selected_timezone} (Daylight Time)")
+        else:
+            timezone_name_map = {
+                "Etc/GMT+12": "UTC-12 (International Date Line West)",
+                "Etc/GMT+11": "UTC-11 (Samoa Time)",
+                "Pacific/Honolulu": "UTC-10 (Hawaii Standard Time)",
+                "America/Anchorage": "UTC-9 (Alaska Standard Time)",
+                "America/Los_Angeles": "UTC-8 (Pacific Standard Time)",
+                "America/Denver": "UTC-7 (Mountain Standard Time)",
+                "America/Chicago": "UTC-6 (Central Standard Time)",
+                "America/New_York": "UTC-5 (Eastern Standard Time)",
+                "America/Halifax": "UTC-4 (Atlantic Standard Time)",
+                "America/Argentina/Buenos_Aires": "UTC-3 (Argentina Time)",
+                "Atlantic/South_Georgia": "UTC-2 (South Georgia & the South Sandwich Islands)",
+                "Atlantic/Azores": "UTC-1 (Azores Standard Time)",
+                "Etc/UTC": "UTC+0 (Greenwich Mean Time)",
+                "Europe/Berlin": "UTC+1 (Central European Time)",
+                "Europe/Athens": "UTC+2 (Eastern European Time)",
+                "Europe/Moscow": "UTC+3 (Moscow Standard Time)",
+                "Asia/Dubai": "UTC+4 (Gulf Standard Time)",
+                "Asia/Karachi": "UTC+5 (Pakistan Standard Time)",
+                "Asia/Dhaka": "UTC+6 (Bangladesh Standard Time)",
+                "Asia/Bangkok": "UTC+7 (Indochina Time)",
+                "Asia/Shanghai": "UTC+8 (China Standard Time)",
+                "Asia/Tokyo": "UTC+9 (Japan Standard Time)",
+                "Australia/Sydney": "UTC+10 (Australian Eastern Standard Time)",
+                "Pacific/Guadalcanal": "UTC+11 (Solomon Islands Time)",
+                "Pacific/Auckland": "UTC+12 (New Zealand Standard Time)",
+                "Pacific/Tongatapu": "UTC+13 (Tonga Time)",
+                "Pacific/Kiritimati": "UTC+14 (Line Islands Time)",
+            }
+            timezone_name = timezone_name_map.get(pytz_timezone, f"{selected_timezone} (Standard Time)")
+
+        await interaction.response.send_message(f"Timezone selected: {timezone_name}", ephemeral=True)
+        await self.check_completion(interaction)
+
+    async def check_completion(self, interaction: discord.Interaction):
+        event = self.bot.events_data.get(self.user.id, {})
+        if all(k in event for k in ('day', 'month', 'year', 'timezone')):
+            # Proceed to number of participants
+            await interaction.message.edit(
+                content="All date and time components selected. Please enter the number of participants:",
+                view=ParticipantsInputView(self.bot, self.user)
+            )
+
+class ParticipantsInputView(discord.ui.View):
+    def __init__(self, bot, user):
+        super().__init__(timeout=300)
+        self.bot = bot
+        self.user = user
+
+        # Button to open the participants modal
+        self.add_item(ParticipantsButton(bot, user))
+
+class ParticipantsButton(discord.ui.Button):
+    def __init__(self, bot, user):
+        super().__init__(
+            label="Enter Number of Participants",
+            style=discord.ButtonStyle.primary,
+            custom_id="participants_button"
+        )
+        self.bot = bot
+        self.user = user
+
+    async def callback(self, interaction: discord.Interaction):
+        if interaction.user != self.user:
+            await interaction.response.send_message("You cannot interact with this event creation process.", ephemeral=True)
+            return
+
+        await interaction.response.send_modal(ParticipantsInputModal(self.bot, self.user))
+
+class ParticipantsInputModal(discord.ui.Modal, title="Number of Participants"):
+    participants = discord.ui.TextInput(
+        label="Enter the number of participants",
+        placeholder="e.g., 10",
+        max_length=5,
+        required=True
+    )
+
+    def __init__(self, bot, user):
+        super().__init__()
+        self.bot = bot
+        self.user = user
+
+    async def on_submit(self, interaction: discord.Interaction):
+        participants_input = self.participants.value.strip()
+        if not participants_input.isdigit() or int(participants_input) <= 0:
+            await interaction.response.send_message(
+                "Please enter a valid positive integer for participants.",
+                ephemeral=True
+            )
+            return
+
+        participants_number = int(participants_input)
+
+        # Store the number of participants
+        self.bot.events_data[self.user.id]['participants'] = participants_number
+
+        # Proceed to finalize the event creation
+        await finalize_event_creation(interaction, self.bot, self.user)
+
+async def finalize_event_creation(interaction: discord.Interaction, bot, user):
+    event_data = bot.events_data.get(user.id, {})
+    if not event_data:
+        await interaction.response.send_message("No event data found. Please start the event creation process again.", ephemeral=True)
+        return
+
+    event_type = event_data.get('event_type', 'Unknown')
+    event_title = event_data.get('event_title', 'No Title')
+    day = event_data.get('day', 'Unknown')
+    month = event_data.get('month', 'Unknown')
+    year = event_data.get('year', 'Unknown')
+    timezone = event_data.get('timezone', 'UTC+0')
+    participants = event_data.get('participants', 'Unknown')
+
+    # Format the date
+    try:
+        event_date = datetime(int(year), int(month), int(day))
+        formatted_date = event_date.strftime("%B %d, %Y")
+    except ValueError:
+        await interaction.response.send_message("Invalid date selected. Please try creating the event again.", ephemeral=True)
+        del bot.events_data[user.id]
+        return
+
+    # Create response buttons for attendees
+    view = AttendeeResponseView(bot, user)
+
+    # Create an embed for the event
+    embed = discord.Embed(
+        title=event_title,
+        description=f"**Event Type:** {event_type}\n**Date:** {formatted_date}\n**Timezone:** {timezone}\n**Participants:** {participants}",
+        color=discord.Color.blue(),
+        timestamp=datetime.now(pytz.utc)  # Current UTC time
+    )
+    embed.set_footer(text=f"Event created by {user.display_name}", icon_url=user.avatar.url if user.avatar else discord.Embed.Empty)
+
+    # Send the event message to the same channel
+    event_message = await interaction.channel.send(
+        embed=embed,
+        view=view
+    )
+
+    # Inform the user
+    await interaction.response.send_message("Event created successfully!", ephemeral=True)
+
+    # Store the event message ID and related data
+    if 'events' not in bot.events_data[user.id]:
+        bot.events_data[user.id]['events'] = []
+
+    bot.events_data[user.id]['events'].append({
+        'message_id': event_message.id,
+        'channel_id': event_message.channel.id,
+        'attendees': {
+            'yes': [],
+            'no': [],
+            'waiting': [],
+            'undecided': []
+        }
+    })
+
+    # Optionally, clear the temporary event data
+    del bot.events_data[user.id]
+
+class AttendeeResponseView(discord.ui.View):
+    def __init__(self, bot, creator):
+        super().__init__(timeout=None)
+        self.bot = bot
+        self.creator = creator
+
+        # Define response buttons
+        self.add_item(AttendeeButton(label="✅ Yes", style=discord.ButtonStyle.success, custom_id="attendee_yes"))
+        self.add_item(AttendeeButton(label="❌ No", style=discord.ButtonStyle.danger, custom_id="attendee_no"))
+        self.add_item(AttendeeButton(label="⏳ Waiting List", style=discord.ButtonStyle.secondary, custom_id="attendee_waiting"))
+        self.add_item(AttendeeButton(label="❓ Undecided", style=discord.ButtonStyle.secondary, custom_id="attendee_undecided"))
+
+class AttendeeButton(discord.ui.Button):
+    def __init__(self, label, style, custom_id):
+        super().__init__(
+            label=label,
+            style=style,
+            custom_id=custom_id
+        )
+
+    async def callback(self, interaction: discord.Interaction):
+        # Identify the response type
+        response_map = {
+            "attendee_yes": "yes",
+            "attendee_no": "no",
+            "attendee_waiting": "waiting",
+            "attendee_undecided": "undecided"
+        }
+
+        response_type = response_map.get(self.custom_id, None)
+        if not response_type:
+            await interaction.response.send_message("Invalid response type.", ephemeral=True)
+            return
+
+        user = interaction.user
+
+        # Prevent the event creator from responding
+        # Find the event data
+        target_event = None
+        creator_id = None
+        for creator, data in self.view.bot.events_data.items():
+            for event in data.get('events', []):
+                if event['message_id'] == interaction.message.id and event['channel_id'] == interaction.message.channel.id:
+                    target_event = event
+                    creator_id = creator
+                    break
+            if target_event:
+                break
+
+        if not target_event:
+            # If not found, search through all events
+            for creator, data in self.view.bot.events_data.items():
+                for event in data.get('events', []):
+                    if event['message_id'] == interaction.message.id and event['channel_id'] == interaction.message.channel.id:
+                        target_event = event
+                        creator_id = creator
+                        break
+                if target_event:
+                    break
+
+        if not target_event:
+            await interaction.response.send_message("Event not found.", ephemeral=True)
+            return
+
+        if user.id == creator_id:
+            await interaction.response.send_message("You cannot respond to your own event.", ephemeral=True)
+            return
+
+        # Remove the user from all lists first
+        for key in target_event['attendees']:
+            if user.id in target_event['attendees'][key]:
+                target_event['attendees'][key].remove(user.id)
+
+        # Add the user to the selected list
+        target_event['attendees'][response_type].append(user.id)
+
+        # Update the embed with attendee lists
+        embed = interaction.message.embeds[0]
+        embed.clear_fields()
+
+        # Helper function to format attendee lists
+        def format_attendees(attendees):
+            if attendees:
+                return '\n'.join([f"<@{uid}>" for uid in attendees])
+            else:
+                return 'None'
+
+        embed.add_field(name="✅ Yes", value=format_attendees(target_event['attendees']['yes']), inline=True)
+        embed.add_field(name="❌ No", value=format_attendees(target_event['attendees']['no']), inline=True)
+        embed.add_field(name="⏳ Waiting List", value=format_attendees(target_event['attendees']['waiting']), inline=True)
+        embed.add_field(name="❓ Undecided", value=format_attendees(target_event['attendees']['undecided']), inline=True)
+
+        await interaction.message.edit(embed=embed)
+        await interaction.response.send_message(f"You have been marked as **{response_type.capitalize()}**.", ephemeral=True)
+
+async def setup(bot):
+    await bot.add_cog(CreateEvent(bot))

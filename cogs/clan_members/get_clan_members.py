@@ -17,7 +17,7 @@ def fetch_clan_members(clan_name):
             "experience": int(experience),
             "kills": int(kills)
         })
-
+    print(members)
     return members
 
 def get_member_activities(member_name, number_of_activities = 5):
@@ -49,4 +49,9 @@ def get_member_activities(member_name, number_of_activities = 5):
         "name": name,
         "activities": recent_activities
     }
+
+
+fetch_clan_members("10s")
+member_activity = get_member_activities("ButtBandiit")
+print(member_activity) 
 

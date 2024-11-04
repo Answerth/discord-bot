@@ -1,0 +1,32 @@
+# create_tables.py
+import psycopg2
+from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, DateTime
+
+def create_db_tables(engine):
+    metadata = MetaData()
+
+    # Define members table with all relevant fields
+    members = Table(
+        'members', metadata,
+        Column('id', Integer, primary_key=True, autoincrement=True),
+        Column('name', String, unique=True, nullable=False),
+        Column('rank', String, nullable=True),
+        Column('experience', Integer, nullable=True),
+        Column('kills', Integer, nullable=True)
+    )
+
+    # Define activities table with all relevant fields
+    activities = Table(
+        'activities', metadata,
+        Column('id', Integer, primary_key=True, autoincrement=True),
+        Column('member_name', String, nullable=False),  # Links to 'name' in members
+        Column('date', DateTime, nullable=False),  # Date of activity
+        Column('details', String, nullable=True),  # Full activity details
+        Column('text', String, nullable=True)  # Additional text field from activities
+    )
+
+    metadata.create_all(engine)
+
+# Database connection setup
+engine = create_engine("postgresql://username:password@localhost:5432/clandb")
+create_db_tables(engine)

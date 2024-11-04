@@ -1,0 +1,12 @@
+[2024-11-03 05:09:33] CONFLICT: Conflict skipped for activity row
+Row Data: {'member_name': 'Camachinator', 'date': '18-Oct-2024 10:33', 'details': "I have solved one of Gielinor's greatest mysteries.", 'text': 'Solved an archaeological mystery.'}
+
+[2024-11-03 05:09:33] CONFLICT: Conflict skipped for activity row
+Row Data: {'member_name': 'One Is Jesus', 'date': '19-Oct-2024 00:58', 'details': 'I levelled my Invention skill, I am now level 69.', 'text': 'Levelled up Invention.'}
+
+[2024-11-03 05:09:33] CONFLICT: Conflict skipped for activity row
+Row Data: {'member_name': 'Kaiilua', 'date': '28-Oct-2024 20:53', 'details': 'I levelled my Crafting skill, I am now level 35.', 'text': 'Levelled up Crafting.'}
+
+[2024-11-03 05:09:33] CONFLICT: Conflict skipped for activity row
+Row Data: {'member_name': 'Japouu', 'date': '01-Nov-2024 05:05', 'details': "I have solved one of Gielinor's greatest mysteries.", 'text': 'Solved an archaeological mystery.'}
+
