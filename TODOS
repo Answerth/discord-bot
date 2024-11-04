@@ -11,11 +11,14 @@
 -- discord slash command to select timezone and produce file for download
 
 -drop alerter
+-- activity update cron logic + classifying
+--- monitoring digest to see if intervention needed (ie failed inserts, unclassified activities)
 -- check against latest price by ID
 -- check for new activities unalerted
 -- modify status to alerted or exempt in activities table
 ----potentially factor in player total level for drop value
 - map discord names to rs names for @'ing players with drops?
+-- bot announcement logic with (wait) for multiple consecutive posts; check rate limits? 
 
 - data crons
 --members update
