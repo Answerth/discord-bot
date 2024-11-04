@@ -51,7 +51,7 @@ def get_member_activities(member_name, number_of_activities = 5):
     }
 
 
-fetch_clan_members("10s")
-member_activity = get_member_activities("ButtBandiit")
-print(member_activity) 
+#fetch_clan_members("10s")
+#member_activity = get_member_activities("ButtBandiit")
+#print(member_activity) 
 

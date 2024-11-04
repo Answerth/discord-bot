@@ -1,0 +1,31 @@
+-ge price getter
+-- /slash command for price check that looks up item id in database, checks https://api.weirdgloop.org/exchange/history/rs/all?id=4151 for historical, and provides relevant information 
+-- WoW, MoM, YoY both price and volume
+- store relevant_items price weekly to allow for desired_item alerts / checking / market analytics
+
+---potentially scrape all item categories for easier categorization analytics 
+
+-WFE html file maker
+-- build matrix of wfe special events y hour and by day
+-- create html table with special formatting around special events, add column for desired timezone and UTC
+-- discord slash command to select timezone and produce file for download
+
+-drop alerter
+-- check against latest price by ID
+-- check for new activities unalerted
+-- modify status to alerted or exempt in activities table
+----potentially factor in player total level for drop value
+- map discord names to rs names for @'ing players with drops?
+
+- data crons
+--members update
+----member name change based on activity
+-activities all
+-activities for players who are very active 
+- stats update
+
+-store player stats
+--statschecker stored over time - weekly? 
+--- use ge price data protocol
+
+
