@@ -195,7 +195,7 @@ async def check_stats_slash(interaction: discord.Interaction, username: str, inc
 
 
 # Initialize bot with your preferred command prefix
-bot = commands.Bot(command_prefix="/")
+#bot = commands.Bot(command_prefix="/")
 
 @bot.tree.command(
     name="embed_video",
