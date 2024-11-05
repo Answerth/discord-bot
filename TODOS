@@ -10,6 +10,55 @@
 -- create html table with special formatting around special events, add column for desired timezone and UTC
 -- discord slash command to select timezone and produce file for download
 
+
+Drop alerter: 
+-Update all clan activities 
+--Create a >> last run.time file? 
+--Rerun classified query on latest activities table
+-- One time: add posted column Mark all exempt if older than 48 hrs or not important drop / achievement
+--- monitoring digest to see if intervention needed (ie failed inserts, unclassified activities): output to file
+-- shelved: check against current price / factor in player total level / drop value
+-repeat logic: 
+-- Get query for latest activity by member
+--get member activities for members active within 14 days / hourly
+--get member activities all members / daily
+---Classify + exempt
+---Digest: all unclassified activities for review
+---Select non-exempt items, Alert, mark alerted in database, wait within rate limits, alert next, repeat
+
+-Bonus: in bot testing channel, @ all clan members to see which ones are not properly tagged
+
+DXP leaderboard:
+-create Stats table 
+-Columns for username, date (now), call members for experience in each skill / totalskill
+
+-create player_timespent table
+-player_id (based on members_id), timestamp, loggedin T/F
+
+Possible metrics 
+Leaderboard Total XP gained 
+Leaderboard most skill levels gained 
+People who gained the most xp in one skill : username, XP, skill
+Player-eficiency: total exp gained / number of logged-in hours
+
+Item Drop histories: 
+-Get all GE items with current prices 1 request
+-Select all activities where activity equals drop 
+-Strip text to get item names
+-Group and count by item name 
+-Multiply item name count by price = total item drop value 
+-Sum all item drop value
+
+-- bonus, hit historical ( monthly) price data, and make the value of each drop reflected by the price at time of drop) 
+
+
+-investigate world60pengs.com tool
+
+-create generic modules for database updaters, discord alerters, file posters, form creators and the like
+
+
+//// OLD:
+
 -drop alerter
 -- activity update cron logic + classifying
 --- monitoring digest to see if intervention needed (ie failed inserts, unclassified activities)
@@ -31,6 +80,3 @@
 --statschecker stored over time - weekly? 
 --- use ge price data protocol
 
--investigate world60pengs.com tool
-
--create generic modules for database updaters, discord alerters, file posters, form creators and the like

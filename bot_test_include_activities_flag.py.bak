@@ -193,34 +193,6 @@ async def check_stats_slash(interaction: discord.Interaction, username: str, inc
     if include_activities and activities_chunks:
         await send_activities(interaction.followup.send, activities_chunks, username, include_activities)
 
-
-# Initialize bot with your preferred command prefix
-bot = commands.Bot(command_prefix="/")
-
-@bot.tree.command(
-    name="embed_video",
-    description="Embed videos from supported platforms: Instagram, Reddit, and Twitter/X"
-)
-async def embed_video(interaction: discord.Interaction, link: str):
-    await interaction.response.defer()
-    
-    # Domain replacements for embedding
-    if "instagram.com" in link:
-        new_link = link.replace("instagram.com", "instagramez.com")
-    elif "reddit.com" in link:
-        new_link = link.replace("reddit.com", "rxddit.com")
-    elif "x.com" in link or "twitter.com" in link:
-        new_link = link.replace("x.com", "vxtwitter.com").replace("twitter.com", "vxtwitter.com")
-    else:
-        await interaction.followup.send("Unsupported URL. Please provide a link from Instagram, Reddit, or Twitter.")
-        return
-
-    # Send the modified link in response
-    await interaction.followup.send(new_link)
-
-
-
-
 # Ensure that the bot token is kept secure and never shared publicly
 # Replace 'YOUR_BOT_TOKEN_HERE' with your actual bot token, stored securely
 try:
@@ -231,5 +203,4 @@ try:
     bot.run(BOT_TOKEN)
 finally:
     cleanup()
-
 

@@ -59,7 +59,7 @@ for name in names:
 data_dir = os.path.dirname(__file__)
 
 print(members_df)
-print(activities_df)
+print(all_activities_df)
 
 members_df.to_pickle(os.path.join(data_dir, "members_data.pkl"))
 all_activities_df.to_pickle(os.path.join(data_dir, "activities_data.pkl"))
