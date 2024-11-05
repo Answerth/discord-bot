@@ -65,7 +65,7 @@ CATEGORY_MAPPING = {
 # Configuration
 OUTPUT_DIR = "category_logs"
 LOG_DIR = "logs"
-TEST_RUN_CATEGORIES = list(CATEGORY_MAPPING.keys())[1:] # All category IDs for full run
+TEST_RUN_CATEGORIES = list(CATEGORY_MAPPING.keys())[26:] # All category IDs for full run
 REQUEST_DELAY = 0.5  # Base delay between requests in seconds
 
 # Ensure output directories exist
