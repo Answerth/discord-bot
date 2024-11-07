@@ -1,0 +1,677 @@
+2024-11-05 23:59:09,591 [INFO] Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-05 23:59:10,262 [INFO] Fetched 85 clan members.
+2024-11-05 23:59:10,275 [INFO] Identified 38 recently active members.
+2024-11-05 23:59:10,276 [INFO] Fetching activities for 38 recently active members.
+2024-11-05 23:59:10,277 [INFO] Total members to fetch activities for: 38
+2024-11-05 23:59:10,277 [INFO] Starting concurrent fetching of member activities.
+2024-11-05 23:59:10,529 [INFO] Retrieved 20 activities for Dash 2
+2024-11-05 23:59:10,615 [INFO] Retrieved 20 activities for Torvar95
+2024-11-05 23:59:10,641 [INFO] Retrieved 20 activities for Fiss
+2024-11-05 23:59:10,656 [INFO] Retrieved 20 activities for Vogue
+2024-11-05 23:59:10,658 [INFO] Retrieved 20 activities for Mrs Zahzr
+2024-11-05 23:59:10,661 [INFO] Retrieved 20 activities for ButtBandiit
+2024-11-05 23:59:10,668 [INFO] Retrieved 20 activities for Zahzr
+2024-11-05 23:59:10,673 [INFO] Retrieved 20 activities for CloudGiraffe
+2024-11-05 23:59:10,676 [INFO] Retrieved 20 activities for Titan Rex
+2024-11-05 23:59:10,683 [INFO] Retrieved 20 activities for bittycoins
+2024-11-05 23:59:10,693 [INFO] Retrieved 20 activities for xAbhi
+2024-11-05 23:59:11,033 [INFO] Retrieved 20 activities for SunnyBadBoy
+2024-11-05 23:59:11,160 [INFO] Retrieved 20 activities for Inpu
+2024-11-05 23:59:11,166 [INFO] Retrieved 20 activities for Humans
+2024-11-05 23:59:11,169 [INFO] Retrieved 20 activities for Just Ate Out
+2024-11-05 23:59:11,170 [INFO] Retrieved 20 activities for Chibbi
+2024-11-05 23:59:11,172 [INFO] Retrieved 20 activities for Baileyz
+2024-11-05 23:59:11,174 [INFO] Retrieved 20 activities for Resouler
+2024-11-05 23:59:11,174 [INFO] Retrieved 20 activities for Michael FK8
+2024-11-05 23:59:11,175 [INFO] Retrieved 20 activities for xZV2
+2024-11-05 23:59:11,178 [INFO] Retrieved 20 activities for Sorow91
+2024-11-05 23:59:11,249 [INFO] Retrieved 20 activities for That1Nooob
+2024-11-05 23:59:11,344 [INFO] Retrieved 20 activities for Berdylongman
+2024-11-05 23:59:11,353 [INFO] Retrieved 20 activities for Repthia
+2024-11-05 23:59:11,355 [INFO] Retrieved 20 activities for Lady g33k
+2024-11-05 23:59:11,356 [INFO] Retrieved 20 activities for Camachinator
+2024-11-05 23:59:11,359 [INFO] Retrieved 20 activities for Pete Breezy
+2024-11-05 23:59:11,360 [INFO] Retrieved 20 activities for CloudPanda
+2024-11-05 23:59:11,360 [INFO] Retrieved 20 activities for Sharxio
+2024-11-05 23:59:11,380 [INFO] Retrieved 20 activities for Brintny10
+2024-11-05 23:59:11,382 [INFO] Retrieved 20 activities for One Is Jesus
+2024-11-05 23:59:11,413 [INFO] Retrieved 20 activities for Puma1
+2024-11-05 23:59:11,508 [INFO] Retrieved 20 activities for YeshuaWins
+2024-11-05 23:59:11,524 [INFO] Retrieved 20 activities for Jesus Rules3
+2024-11-05 23:59:11,526 [INFO] Retrieved 20 activities for KaliFuries
+2024-11-05 23:59:11,528 [INFO] Retrieved 20 activities for Japouu
+2024-11-05 23:59:11,530 [INFO] Retrieved 20 activities for Kaiilua
+2024-11-05 23:59:11,541 [INFO] Retrieved 20 activities for Troubles933
+2024-11-05 23:59:11,543 [INFO] Completed concurrent fetching of member activities.
+2024-11-05 23:59:11,546 [INFO] Data saved to /home/discordbeta/discordbot10s/cogs/clan_members/fetch_and_flatten_data_files/members_data.pkl and /home/discordbeta/discordbot10s/cogs/clan_members/fetch_and_flatten_data_files/activities_data.pkl
+2024-11-05 23:59:11,546 [INFO] Data insertion process completed.
+2024-11-06 19:14:03,019 [INFO] Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-06 19:14:03,741 [INFO] Fetched 85 clan members.
+2024-11-06 19:14:03,749 [INFO] Fetching activities for all members.
+2024-11-06 19:14:03,751 [INFO] Total members to fetch activities for: 85
+2024-11-06 19:14:03,753 [INFO] Starting concurrent fetching of member activities.
+2024-11-06 19:14:05,189 [INFO] Retrieved 0 activities for okho
+2024-11-06 19:14:07,303 [INFO] Retrieved 20 activities for Dash 2
+2024-11-06 19:14:07,409 [INFO] Retrieved 20 activities for IROneManClan
+2024-11-06 19:14:07,466 [INFO] Retrieved 20 activities for Kicap
+2024-11-06 19:14:07,712 [INFO] Retrieved 20 activities for CloudGiraffe
+2024-11-06 19:14:07,809 [INFO] Retrieved 20 activities for Titan Rex
+2024-11-06 19:14:07,967 [INFO] Retrieved 20 activities for 0verheated
+2024-11-06 19:14:08,409 [INFO] Retrieved 20 activities for Ernxs
+2024-11-06 19:14:08,461 [INFO] Retrieved 20 activities for Vogue
+2024-11-06 19:14:08,614 [INFO] Retrieved 20 activities for Zahzr
+2024-11-06 19:14:08,816 [INFO] Retrieved 20 activities for ButtBandiit
+2024-11-06 19:14:08,867 [INFO] Retrieved 20 activities for Mrs Zahzr
+2024-11-06 19:14:13,295 [INFO] Retrieved 20 activities for lana rey del
+2024-11-06 19:14:13,315 [INFO] Retrieved 20 activities for xAbhi
+2024-11-06 19:14:13,338 [INFO] Retrieved 20 activities for Torvar95
+2024-11-06 19:14:13,341 [INFO] Retrieved 20 activities for Fiss
+2024-11-06 19:14:13,343 [INFO] Retrieved 20 activities for bittycoins
+2024-11-06 19:14:14,356 [INFO] Retrieved 20 activities for Inpu
+2024-11-06 19:14:14,364 [INFO] Retrieved 0 activities for Gunkillsword
+2024-11-06 19:14:14,515 [INFO] Retrieved 20 activities for SunnyBadBoy
+2024-11-06 19:14:14,663 [INFO] Retrieved 20 activities for Resouler
+2024-11-06 19:14:14,726 [INFO] Retrieved 20 activities for Humans
+2024-11-06 19:14:15,373 [INFO] Retrieved 20 activities for Rideswamp845
+2024-11-06 19:14:15,414 [INFO] Retrieved 20 activities for Wekill
+2024-11-06 19:14:15,927 [INFO] Retrieved 20 activities for Just Ate Out
+2024-11-06 19:14:16,366 [INFO] Retrieved 20 activities for Chibbi
+2024-11-06 19:14:16,371 [INFO] Retrieved 20 activities for xZV2
+2024-11-06 19:14:16,619 [INFO] Retrieved 20 activities for Chowenoch
+2024-11-06 19:14:16,907 [INFO] Retrieved 20 activities for OGsean
+2024-11-06 19:14:17,226 [INFO] Retrieved 20 activities for adragonlady
+2024-11-06 19:14:17,481 [INFO] Retrieved 20 activities for Baileyz
+2024-11-06 19:14:18,376 [INFO] Retrieved 20 activities for Count Milo
+2024-11-06 19:14:18,678 [INFO] Retrieved 20 activities for VR6
+2024-11-06 19:14:18,741 [INFO] Retrieved 20 activities for That1Nooob
+2024-11-06 19:14:24,374 [INFO] Retrieved 20 activities for Michael FK8
+2024-11-06 19:14:24,385 [INFO] Retrieved 20 activities for DrunkCowboy
+2024-11-06 19:14:24,428 [INFO] Retrieved 0 activities for Moon Daisy
+2024-11-06 19:14:24,460 [INFO] Retrieved 20 activities for Snugglz69
+2024-11-06 19:14:24,555 [INFO] Retrieved 20 activities for Sorow91
+2024-11-06 19:14:24,627 [INFO] Retrieved 20 activities for Berdylongman
+2024-11-06 19:14:24,838 [INFO] Retrieved 0 activities for Troy4770
+2024-11-06 19:14:25,346 [INFO] Retrieved 0 activities for Ha Anh
+2024-11-06 19:14:25,492 [INFO] Retrieved 20 activities for Shiroo Ronin
+2024-11-06 19:14:25,779 [INFO] Retrieved 0 activities for XSophrosyne
+2024-11-06 19:14:26,189 [INFO] Retrieved 20 activities for Mr Siloman
+2024-11-06 19:14:26,544 [INFO] Retrieved 0 activities for DeliPotato
+2024-11-06 19:14:27,262 [INFO] Retrieved 20 activities for Pete Breezy
+2024-11-06 19:14:27,294 [INFO] Retrieved 20 activities for Lady g33k
+2024-11-06 19:14:27,406 [INFO] Retrieved 20 activities for Repthia
+2024-11-06 19:14:27,544 [INFO] Retrieved 20 activities for Max Drip
+2024-11-06 19:14:31,384 [INFO] Retrieved 20 activities for CloudPanda
+2024-11-06 19:14:31,403 [INFO] Retrieved 10 activities for AceHarlequin
+2024-11-06 19:14:31,405 [INFO] Retrieved 20 activities for Camachinator
+2024-11-06 19:14:31,451 [INFO] Retrieved 20 activities for ItsRileyJake
+2024-11-06 19:14:31,454 [INFO] Retrieved 20 activities for Burnings
+2024-11-06 19:14:31,489 [INFO] Retrieved 20 activities for Yewr Screwed
+2024-11-06 19:14:31,808 [INFO] Retrieved 20 activities for SaphirePoopy
+2024-11-06 19:14:32,481 [INFO] Retrieved 20 activities for 420Outkast
+2024-11-06 19:14:33,001 [INFO] Retrieved 0 activities for koin01
+2024-11-06 19:14:33,394 [INFO] Retrieved 0 activities for bioshiok
+2024-11-06 19:14:33,452 [INFO] Retrieved 0 activities for NelsonM20112
+2024-11-06 19:14:34,321 [INFO] Retrieved 0 activities for sorjaibear91
+2024-11-06 19:14:34,404 [INFO] Retrieved 20 activities for Brintny10
+2024-11-06 19:14:34,410 [INFO] Retrieved 10 activities for Ernis x_x
+2024-11-06 19:14:34,420 [INFO] Retrieved 0 activities for Elven_Arwen1
+2024-11-06 19:14:34,478 [INFO] Retrieved 20 activities for UhtredKing
+2024-11-06 19:14:34,857 [INFO] Retrieved 0 activities for Rengokuman
+2024-11-06 19:14:35,504 [INFO] Retrieved 20 activities for swamybammy
+2024-11-06 19:14:39,234 [INFO] Retrieved 20 activities for Sharxio
+2024-11-06 19:14:39,255 [INFO] Retrieved 20 activities for Cronochin
+2024-11-06 19:14:39,259 [INFO] Retrieved 20 activities for Puma1
+2024-11-06 19:14:39,364 [INFO] Retrieved 20 activities for TTV Undraz
+2024-11-06 19:14:39,391 [INFO] Retrieved 20 activities for Jabib
+2024-11-06 19:14:39,398 [INFO] Retrieved 20 activities for Klauthion
+2024-11-06 19:14:39,429 [INFO] Retrieved 20 activities for Kaiilua
+2024-11-06 19:14:39,861 [INFO] Retrieved 20 activities for KaliFuries
+2024-11-06 19:14:40,013 [INFO] Retrieved 20 activities for One Is Jesus
+2024-11-06 19:14:41,102 [INFO] Retrieved 20 activities for YeshuaWins
+2024-11-06 19:14:41,214 [INFO] Retrieved 0 activities for Lady Spam
+2024-11-06 19:14:41,673 [INFO] Retrieved 0 activities for Lady Alt1
+2024-11-06 19:14:41,720 [INFO] Retrieved 20 activities for Japouu
+2024-11-06 19:14:41,806 [INFO] Retrieved 20 activities for Sabre Taser
+2024-11-06 19:14:41,921 [INFO] Retrieved 20 activities for Troubles933
+2024-11-06 19:14:42,507 [INFO] Retrieved 20 activities for MeatyMark
+2024-11-06 19:14:49,158 [INFO] Retrieved 20 activities for Jesus Rules3
+2024-11-06 19:14:49,161 [INFO] Completed concurrent fetching of member activities.
+2024-11-06 19:14:49,170 [INFO] Data saved to /home/discordbeta/discordbot10s/cogs/clan_members/fetch_and_flatten_data_files/members_data.pkl and /home/discordbeta/discordbot10s/cogs/clan_members/fetch_and_flatten_data_files/activities_data.pkl
+2024-11-06 19:14:49,171 [INFO] Data insertion process completed.
+2024-11-07 02:05:32,620 [INFO] Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-07 02:05:33,332 [INFO] Fetched 85 clan members.
+2024-11-07 02:05:33,357 [INFO] Identified 36 recently active members.
+2024-11-07 02:05:33,360 [INFO] Fetching activities for 36 recently active members.
+2024-11-07 02:05:33,360 [INFO] Total members to fetch activities for: 36
+2024-11-07 02:05:33,361 [INFO] Starting concurrent fetching of member activities.
+2024-11-07 02:05:33,597 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,598 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,598 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,598 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,598 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,598 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,598 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,598 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,599 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,599 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,599 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,599 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,599 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,600 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,600 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,600 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,600 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,600 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,600 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,601 [ERROR] Error parsing activity for ButtBandiit: None
+2024-11-07 02:05:33,601 [INFO] Retrieved 0 activities for ButtBandiit
+2024-11-07 02:05:35,735 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,736 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,736 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,736 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,736 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,737 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,737 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,737 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,737 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,737 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,737 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,737 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,737 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,737 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,737 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,737 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,738 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,738 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,738 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,738 [ERROR] Error parsing activity for Mrs Zahzr: None
+2024-11-07 02:05:35,738 [INFO] Retrieved 0 activities for Mrs Zahzr
+2024-11-07 02:05:35,765 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,765 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,766 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,766 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,766 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,766 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,766 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,767 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,767 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,767 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,767 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,767 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,767 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,768 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,768 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,768 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,768 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,768 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,768 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,768 [ERROR] Error parsing activity for CloudGiraffe: None
+2024-11-07 02:05:35,768 [INFO] Retrieved 0 activities for CloudGiraffe
+2024-11-07 02:05:36,069 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,069 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,069 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,069 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,070 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,070 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,070 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,070 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,070 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,070 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,070 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,070 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,070 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,071 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,071 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,071 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,071 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,071 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,071 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,071 [ERROR] Error parsing activity for Vogue: None
+2024-11-07 02:05:36,072 [INFO] Retrieved 0 activities for Vogue
+2024-11-07 02:05:36,122 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,122 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,122 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,123 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,123 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,123 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,123 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,124 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,124 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,124 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,124 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,124 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,125 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,125 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,125 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,125 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,125 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,126 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,126 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,126 [ERROR] Error parsing activity for xAbhi: None
+2024-11-07 02:05:36,126 [INFO] Retrieved 0 activities for xAbhi
+2024-11-07 02:05:36,128 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,129 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,129 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,129 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,129 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,129 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,129 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,130 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,130 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,130 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,130 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,130 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,130 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,130 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,130 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,131 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,131 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,131 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,131 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,131 [ERROR] Error parsing activity for SunnyBadBoy: None
+2024-11-07 02:05:36,131 [INFO] Retrieved 0 activities for SunnyBadBoy
+2024-11-07 02:05:36,423 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,424 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,424 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,424 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,424 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,424 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,424 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,424 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,425 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,425 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,425 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,426 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,426 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,426 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,426 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,426 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,427 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,427 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,427 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,427 [ERROR] Error parsing activity for Zahzr: None
+2024-11-07 02:05:36,427 [INFO] Retrieved 0 activities for Zahzr
+2024-11-07 02:05:36,567 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,567 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,567 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,567 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,567 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,567 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,567 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,567 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,567 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,567 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,568 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,568 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,568 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,568 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,568 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,568 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,568 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,568 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,568 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,568 [ERROR] Error parsing activity for Torvar95: None
+2024-11-07 02:05:36,568 [INFO] Retrieved 0 activities for Torvar95
+2024-11-07 02:05:36,732 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,732 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,732 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,732 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,732 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,733 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,733 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,733 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,733 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,733 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,733 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,733 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,733 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,734 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,734 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,734 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,734 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,734 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,734 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,735 [ERROR] Error parsing activity for Fiss: None
+2024-11-07 02:05:36,735 [INFO] Retrieved 0 activities for Fiss
+2024-11-07 02:05:36,871 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,871 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,872 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,872 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,872 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,872 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,872 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,872 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,872 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,872 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,873 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,873 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,873 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,873 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,873 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,873 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,873 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,873 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,873 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,873 [ERROR] Error parsing activity for Dash 2: None
+2024-11-07 02:05:36,873 [INFO] Retrieved 0 activities for Dash 2
+2024-11-07 02:05:38,078 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,078 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,078 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,078 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,079 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,079 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,079 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,079 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,079 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,079 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,079 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,079 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,079 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,079 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,079 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,080 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,080 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,080 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,080 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,080 [ERROR] Error parsing activity for Sorow91: None
+2024-11-07 02:05:38,080 [INFO] Retrieved 0 activities for Sorow91
+2024-11-07 02:05:38,878 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,878 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,879 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,879 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,879 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,880 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,880 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,880 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,880 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,880 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,880 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,880 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,880 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,880 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,880 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,881 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,881 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,881 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,881 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,881 [ERROR] Error parsing activity for bittycoins: None
+2024-11-07 02:05:38,881 [INFO] Retrieved 0 activities for bittycoins
+2024-11-07 02:05:39,171 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,171 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,172 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,172 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,172 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,173 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,173 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,173 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,174 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,174 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,174 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,174 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,174 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,174 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,175 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,175 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,175 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,175 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,175 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,175 [ERROR] Error parsing activity for Michael FK8: None
+2024-11-07 02:05:39,176 [INFO] Retrieved 0 activities for Michael FK8
+2024-11-07 02:05:39,178 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,179 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,179 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,180 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,180 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,180 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,180 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,181 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,181 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,182 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,182 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,182 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,183 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,183 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,183 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,183 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,184 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,184 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,184 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,184 [ERROR] Error parsing activity for That1Nooob: None
+2024-11-07 02:05:39,185 [INFO] Retrieved 0 activities for That1Nooob
+2024-11-07 02:05:42,509 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,510 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,510 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,510 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,510 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,510 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,510 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,511 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,511 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,511 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,511 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,511 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,512 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,512 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,512 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,512 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,512 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,512 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,513 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,513 [ERROR] Error parsing activity for Resouler: None
+2024-11-07 02:05:42,513 [INFO] Retrieved 0 activities for Resouler
+2024-11-07 02:05:43,321 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,321 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,321 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,321 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,321 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,321 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,321 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,321 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,321 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,321 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,321 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,322 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,322 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,322 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,322 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,322 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,322 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,322 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,322 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,323 [ERROR] Error parsing activity for Berdylongman: None
+2024-11-07 02:05:43,323 [INFO] Retrieved 0 activities for Berdylongman
+2024-11-07 02:05:43,351 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,351 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,351 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,351 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,351 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,351 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,352 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,352 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,352 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,352 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,352 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,352 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,352 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,352 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,353 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,353 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,353 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,354 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,354 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,354 [ERROR] Error parsing activity for xZV2: None
+2024-11-07 02:05:43,354 [INFO] Retrieved 0 activities for xZV2
+2024-11-07 02:05:43,418 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,419 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,419 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,419 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,419 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,419 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,420 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,420 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,420 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,420 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,420 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,420 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,421 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,421 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,421 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,421 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,421 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,422 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,422 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,422 [ERROR] Error parsing activity for Baileyz: None
+2024-11-07 02:05:43,422 [INFO] Retrieved 0 activities for Baileyz
+2024-11-07 02:05:43,434 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,435 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,435 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,435 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,435 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,436 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,436 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,436 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,436 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,436 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,436 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,436 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,437 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,437 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,437 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,438 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,438 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,438 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,439 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,439 [ERROR] Error parsing activity for Just Ate Out: None
+2024-11-07 02:05:43,439 [INFO] Retrieved 0 activities for Just Ate Out
+2024-11-07 02:05:43,857 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,858 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,858 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,858 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,858 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,858 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,859 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,859 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,859 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,859 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,859 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,859 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,859 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,859 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,859 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,860 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,860 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,860 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,860 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,860 [ERROR] Error parsing activity for Brintny10: None
+2024-11-07 02:05:43,860 [INFO] Retrieved 0 activities for Brintny10
+2024-11-07 02:05:44,258 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,258 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,258 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,258 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,258 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,258 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,258 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,259 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,259 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,259 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,259 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,259 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,259 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,259 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,259 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,259 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,260 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,260 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,260 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,260 [ERROR] Error parsing activity for Pete Breezy: None
+2024-11-07 02:05:44,260 [INFO] Retrieved 0 activities for Pete Breezy
+2024-11-07 02:08:00,609 [INFO] Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-07 02:08:01,250 [INFO] Fetched 85 clan members.
+2024-11-07 02:08:01,269 [INFO] Identified 36 recently active members.
+2024-11-07 02:08:01,271 [INFO] Fetching activities for 36 recently active members.
+2024-11-07 02:08:01,271 [INFO] Total members to fetch activities for: 36
+2024-11-07 02:08:01,272 [INFO] Starting concurrent fetching of member activities.
+2024-11-07 02:08:01,486 [INFO] Retrieved 20 activities for bittycoins
+2024-11-07 02:08:01,510 [INFO] Retrieved 20 activities for Zahzr
+2024-11-07 02:08:01,515 [INFO] Retrieved 20 activities for Fiss
+2024-11-07 02:08:01,527 [INFO] Retrieved 20 activities for Dash 2
+2024-11-07 02:08:01,544 [INFO] Retrieved 20 activities for Torvar95
+2024-11-07 02:08:01,553 [INFO] Retrieved 20 activities for Mrs Zahzr
+2024-11-07 02:08:01,653 [INFO] Retrieved 20 activities for SunnyBadBoy
+2024-11-07 02:08:01,678 [INFO] Retrieved 20 activities for Inpu
+2024-11-07 02:08:01,684 [INFO] Retrieved 20 activities for Resouler
+2024-11-07 02:08:01,689 [INFO] Retrieved 20 activities for xAbhi
+2024-11-07 02:08:01,702 [INFO] Retrieved 20 activities for Vogue
+2024-11-07 02:08:01,704 [INFO] Retrieved 20 activities for CloudGiraffe
+2024-11-07 02:08:01,708 [INFO] Retrieved 20 activities for ButtBandiit
+2024-11-07 02:08:01,710 [INFO] Retrieved 20 activities for xZV2
+2024-11-07 02:08:01,717 [INFO] Retrieved 20 activities for Just Ate Out
+2024-11-07 02:08:01,728 [INFO] Retrieved 20 activities for Chibbi
+2024-11-07 02:08:01,828 [INFO] Retrieved 20 activities for Sorow91
+2024-11-07 02:08:01,846 [INFO] Retrieved 20 activities for Baileyz
+2024-11-07 02:08:01,856 [INFO] Retrieved 20 activities for Michael FK8
+2024-11-07 02:08:01,864 [INFO] Retrieved 20 activities for That1Nooob
+2024-11-07 02:08:01,870 [INFO] Retrieved 20 activities for Pete Breezy
+2024-11-07 02:08:01,874 [INFO] Retrieved 20 activities for Berdylongman
+2024-11-07 02:08:01,878 [INFO] Retrieved 20 activities for CloudPanda
+2024-11-07 02:08:01,891 [INFO] Retrieved 20 activities for Lady g33k
+2024-11-07 02:08:01,894 [INFO] Retrieved 20 activities for Camachinator
+2024-11-07 02:08:01,915 [INFO] Retrieved 20 activities for Burnings
+2024-11-07 02:08:01,995 [INFO] Retrieved 20 activities for Brintny10
+2024-11-07 02:08:02,027 [INFO] Retrieved 20 activities for Sharxio
+2024-11-07 02:08:02,031 [INFO] Retrieved 20 activities for One Is Jesus
+2024-11-07 02:08:02,035 [INFO] Retrieved 20 activities for Puma1
+2024-11-07 02:08:02,048 [INFO] Retrieved 20 activities for YeshuaWins
+2024-11-07 02:08:04,416 [INFO] Retrieved 20 activities for Jesus Rules3
+2024-11-07 02:08:04,671 [INFO] Retrieved 20 activities for Troubles933
+2024-11-07 02:08:04,915 [INFO] Retrieved 20 activities for KaliFuries
+2024-11-07 02:08:05,067 [INFO] Retrieved 20 activities for Japouu
+2024-11-07 02:08:05,928 [INFO] Retrieved 20 activities for Sabre Taser
+2024-11-07 02:08:05,930 [INFO] Completed concurrent fetching of member activities.
+2024-11-07 02:08:05,935 [INFO] Data saved to /home/discordbeta/discordbot10s/./cogs/clan_members/fetch_and_flatten_data_files/members_data.pkl and /home/discordbeta/discordbot10s/./cogs/clan_members/fetch_and_flatten_data_files/activities_data.pkl
+2024-11-07 02:08:05,936 [INFO] Data insertion process completed.
+2024-11-07 02:21:22,656 [INFO] Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-07 02:21:23,333 [INFO] Fetched 85 clan members.
+2024-11-07 02:21:23,347 [INFO] Identified 36 recently active members.
+2024-11-07 02:21:23,349 [INFO] Fetching activities for 36 recently active members.
+2024-11-07 02:21:23,349 [INFO] Total members to fetch activities for: 36
+2024-11-07 02:21:23,349 [INFO] Starting concurrent fetching of member activities.
+2024-11-07 02:21:25,296 [INFO] Retrieved 20 activities for Fiss
+2024-11-07 02:21:25,346 [INFO] Retrieved 20 activities for Torvar95
+2024-11-07 02:21:25,551 [INFO] Retrieved 20 activities for xAbhi
+2024-11-07 02:21:25,652 [INFO] Retrieved 20 activities for Zahzr
+2024-11-07 02:21:25,893 [INFO] Retrieved 20 activities for Dash 2
+2024-11-07 02:21:25,902 [INFO] Retrieved 20 activities for CloudGiraffe
+2024-11-07 02:21:26,497 [INFO] Retrieved 20 activities for ButtBandiit
+2024-11-07 02:21:26,500 [INFO] Retrieved 20 activities for Mrs Zahzr
+2024-11-07 02:21:26,916 [INFO] Retrieved 20 activities for Vogue
+2024-11-07 02:21:30,888 [INFO] Retrieved 20 activities for bittycoins
+2024-11-07 02:21:30,966 [INFO] Retrieved 20 activities for Resouler
+2024-11-07 02:21:30,982 [INFO] Retrieved 20 activities for xZV2
+2024-11-07 02:21:31,144 [INFO] Retrieved 20 activities for SunnyBadBoy
+2024-11-07 02:21:31,189 [INFO] Retrieved 20 activities for Just Ate Out
+2024-11-07 02:21:32,042 [INFO] Retrieved 20 activities for Inpu
+2024-11-07 02:21:32,237 [INFO] Retrieved 20 activities for Chibbi
+2024-11-07 02:21:32,289 [INFO] Retrieved 20 activities for Baileyz
+2024-11-07 02:21:32,487 [INFO] Retrieved 20 activities for Sorow91
+2024-11-07 02:21:32,888 [INFO] Retrieved 20 activities for That1Nooob
+2024-11-07 02:21:32,952 [INFO] Retrieved 20 activities for Michael FK8
+2024-11-07 02:21:33,687 [INFO] Retrieved 20 activities for Lady g33k
+2024-11-07 02:21:34,236 [INFO] Retrieved 20 activities for Berdylongman
+2024-11-07 02:21:34,388 [INFO] Retrieved 20 activities for Pete Breezy
+2024-11-07 02:21:34,947 [INFO] Retrieved 20 activities for CloudPanda
+2024-11-07 02:21:35,492 [INFO] Retrieved 20 activities for Sharxio
+2024-11-07 02:21:38,744 [INFO] Retrieved 20 activities for Burnings
+2024-11-07 02:21:38,802 [INFO] Retrieved 20 activities for Puma1
+2024-11-07 02:21:38,975 [INFO] Retrieved 20 activities for KaliFuries
+2024-11-07 02:21:39,001 [INFO] Retrieved 20 activities for Camachinator
+2024-11-07 02:21:39,081 [INFO] Retrieved 20 activities for Brintny10
+2024-11-07 02:21:39,087 [INFO] Retrieved 20 activities for Japouu
+2024-11-07 02:21:39,203 [INFO] Retrieved 20 activities for One Is Jesus
+2024-11-07 02:21:39,349 [INFO] Retrieved 20 activities for YeshuaWins
+2024-11-07 02:21:40,891 [INFO] Retrieved 20 activities for Sabre Taser
+2024-11-07 02:21:41,037 [INFO] Retrieved 20 activities for Jesus Rules3
+2024-11-07 02:21:41,242 [INFO] Retrieved 20 activities for Troubles933
+2024-11-07 02:21:41,244 [INFO] Completed concurrent fetching of member activities.
+2024-11-07 02:21:41,249 [INFO] Data saved to /home/discordbeta/discordbot10s/./cogs/clan_members/fetch_and_flatten_data_files/members_data.pkl and /home/discordbeta/discordbot10s/./cogs/clan_members/fetch_and_flatten_data_files/activities_data.pkl
+2024-11-07 02:21:41,249 [INFO] Data insertion process completed.

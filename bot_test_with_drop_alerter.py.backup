@@ -1,3 +1,5 @@
+# bot_test_with_drop_alerter.py
+
 import os
 import signal
 import discord
@@ -6,6 +8,8 @@ from discord import app_commands, Embed
 from cogs.clan_members.get_clan_members import fetch_clan_members, get_member_activities
 import io
 import re  # For potential future use with as_file functionality
+import asyncio
+import logging
 
 # Define the lock file path
 LOCKFILE = "/tmp/minimal_bot_test.lock"
@@ -62,30 +66,6 @@ async def send_activities(send_func, activities_chunks, username, include_activi
         # This function should not handle sending this message to avoid multiple posts
         pass
 
-        # ------------------- #
-        # # Future `as_file` functionality
-        # if as_file:
-        #     # Combine all activities chunks into a single string
-        #     activities_text = ''.join(activities_chunks)
-            
-        #     # Strip ANSI codes for better readability in the text file
-        #     activities_text_clean = strip_ansi_codes(activities_text)
-            
-        #     # Create an in-memory text file
-        #     file = discord.File(
-        #         io.BytesIO(activities_text_clean.encode('utf-8')),
-        #         filename=f"{username}_activities.txt"
-        #     )
-            
-        #     # Send the file with a message
-        #     await send_func(content="Here are the activities:", file=file)
-        # else:
-        #     # Send Activities as embedded messages
-        #     for chunk in activities_chunks:
-        #         embed = Embed(description=f"```ansi\n{chunk}\n```")
-        #         await send_func(embed=embed)
-        # ------------------- #
-
 # Run the lockfile check at the beginning
 is_already_running()
 
@@ -110,7 +90,6 @@ async def ping_slash(interaction: discord.Interaction):
     """Slash command that responds with 'Pong!'."""
     await interaction.response.send_message("Pong!")
 
-
 @bot.tree.command(name="activity")
 @app_commands.describe(username="The RuneScape username to fetch activities for")
 async def activity(interaction: discord.Interaction, username: str, qty_max_10_atm: int = 5):
@@ -120,14 +99,14 @@ async def activity(interaction: discord.Interaction, username: str, qty_max_10_a
     member_data = get_member_activities(username, qty_max_10_atm)
 
     # Format activities as an embed for Discord
-    embed = Embed(title=f"Recent Activities for {member_data['name']}", color=discord.Color.blue())
+    embed = Embed(title=f"Recent Activities for {username}", color=discord.Color.blue())
 
-    if not member_data["activities"]:
+    if member_data.empty:
         embed.description = "No recent activities found within the last 30 days."
     else:
         activity_text = "\n".join(
             f"- **{activity['date']}**: {activity['details']}"
-            for activity in member_data["activities"]
+            for _, activity in member_data.iterrows()
         )
         embed.add_field(name="Activities", value=activity_text, inline=False)
 
@@ -193,24 +172,22 @@ async def check_stats_slash(interaction: discord.Interaction, username: str, inc
     if include_activities and activities_chunks:
         await send_activities(interaction.followup.send, activities_chunks, username, include_activities)
 
-
-# Initialize bot with your preferred command prefix
-#bot = commands.Bot(command_prefix="/")
-
 @bot.tree.command(
     name="embed_video",
     description="Embed videos from supported platforms: Instagram, Reddit, and Twitter/X"
 )
 async def embed_video(interaction: discord.Interaction, link: str):
     await interaction.response.defer()
-    
+
     # Domain replacements for embedding
     if "instagram.com" in link:
         new_link = link.replace("instagram.com", "instagramez.com")
     elif "reddit.com" in link:
         new_link = link.replace("reddit.com", "rxddit.com")
-    elif "x.com" in link or "twitter.com" in link:
-        new_link = link.replace("x.com", "vxtwitter.com").replace("twitter.com", "vxtwitter.com")
+    elif "x.com" in link:
+        new_link = link.replace("x.com", "fxtwitter.com")
+    elif "twitter.com" in link:
+        new_link = link.replace("twitter.com", "fxtwitter.com")
     else:
         await interaction.followup.send("Unsupported URL. Please provide a link from Instagram, Reddit, or Twitter.")
         return
@@ -218,18 +195,31 @@ async def embed_video(interaction: discord.Interaction, link: str):
     # Send the modified link in response
     await interaction.followup.send(new_link)
 
+# Load the alert_drops cog
+initial_extensions = [
+    'cogs.clan_members.alert_drops',  # Add the new cog here
+]
 
+async def load_extensions():
+    for extension in initial_extensions:
+        try:
+            await bot.load_extension(extension)
+            print(f"Loaded extension '{extension}'")
+        except Exception as e:
+            print(f"Failed to load extension {extension}. {e}")
 
+async def main():
+    await load_extensions()
+    await bot.start(os.getenv('DISCORD_BOT_TOKEN'))
 
-# Ensure that the bot token is kept secure and never shared publicly
-# Replace 'YOUR_BOT_TOKEN_HERE' with your actual bot token, stored securely
-try:
-    # Example using an environment variable for the bot token
+if __name__ == "__main__":
+    # Ensure that the bot token is loaded from the environment variable
     BOT_TOKEN = os.getenv('DISCORD_BOT_TOKEN')
     if not BOT_TOKEN:
         raise ValueError("Bot token not found. Please set the DISCORD_BOT_TOKEN environment variable.")
-    bot.run(BOT_TOKEN)
-finally:
-    cleanup()
 
+    try:
+        asyncio.run(main())
+    finally:
+        cleanup()
 

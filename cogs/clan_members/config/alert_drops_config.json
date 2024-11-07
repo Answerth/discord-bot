@@ -1,0 +1,9 @@
+{
+    "discord_channel_id": 1209587291169882173,
+    "alert_interval_minutes": 60,
+    "excluded_texts": [
+        "I found a crystal triskelion fragment.",
+        "I found an ancient effigy"
+    ]
+}
+

@@ -1,0 +1,166 @@
+# ~/discordbot10s/cogs/clan_members/alert_drops.py
+
+import os
+import json
+import asyncio
+import discord
+from discord.ext import commands, tasks
+from sqlalchemy import create_engine, Table, MetaData, select, update, func
+from sqlalchemy.exc import SQLAlchemyError
+from datetime import datetime
+import logging
+
+class AlertDropsCog(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+        self.config = self.load_config()
+        self.engine = self.create_db_engine()
+        self.channel_id = self.config.get('discord_channel_id')
+        self.alert_interval = self.config.get('alert_interval_minutes', 1)  # Default to hourly
+        self.excluded_texts = self.config.get('excluded_texts', [])
+        self.alert_activities.start()
+
+        # Configure logging to output to both console and file
+        log_dir = os.path.join(os.path.dirname(__file__), '../../logs')
+        os.makedirs(log_dir, exist_ok=True)
+
+        logger = logging.getLogger(__name__)
+        logger.setLevel(logging.INFO)
+
+        # File handler
+        file_handler = logging.FileHandler(os.path.join(log_dir, 'alert_drops.log'))
+        file_handler.setLevel(logging.INFO)
+        file_formatter = logging.Formatter('%(asctime)s [%(levelname)s] %(name)s: %(message)s')
+        file_handler.setFormatter(file_formatter)
+
+        # Console handler
+        console_handler = logging.StreamHandler()
+        console_handler.setLevel(logging.INFO)
+        console_formatter = logging.Formatter('%(asctime)s [%(levelname)s] %(name)s: %(message)s')
+        console_handler.setFormatter(console_formatter)
+
+        # Add handlers to the logger
+        logger.addHandler(file_handler)
+        logger.addHandler(console_handler)
+
+        self.logger = logger
+
+    def load_config(self):
+        """Load configuration from alert_drops_config.json."""
+        config_path = os.path.join(os.path.dirname(__file__), 'config', 'alert_drops_config.json')
+        if not os.path.exists(config_path):
+            raise FileNotFoundError(f"Configuration file not found: {config_path}")
+        with open(config_path) as config_file:
+            config = json.load(config_file)
+        return config
+
+    def create_db_engine(self):
+        """Create SQLAlchemy engine using the loaded dbconfig.json."""
+        # Load global dbconfig.json
+        config_path = os.path.join(os.path.expanduser("~"), 'discordbot10s', 'dbconfig.json')
+        if not os.path.exists(config_path):
+            raise FileNotFoundError(f"Database configuration file not found: {config_path}")
+        with open(config_path) as db_config_file:
+            db_config = json.load(db_config_file)
+
+        # Create engine
+        engine = create_engine(
+            f"postgresql://{db_config['username']}:{db_config['password']}@{db_config['host']}:{db_config['port']}/{db_config['database']}"
+        )
+        return engine
+
+    @tasks.loop(minutes=1)  # Runs every hour; adjust as needed
+    async def alert_activities(self):
+        """Fetch unalerted activities and send alerts to Discord."""
+        await self.bot.wait_until_ready()  # Ensure the bot is ready
+        channel = self.bot.get_channel(self.channel_id)
+        if channel is None:
+            self.logger.error(f"Channel with ID {self.channel_id} not found.")
+            return
+
+        metadata = MetaData()
+        activities_table = Table('activities', metadata, autoload_with=self.engine)
+
+        try:
+            with self.engine.connect() as conn:
+                # Updated select statement with exclusion of specific texts
+
+                self.excluded_texts = ['%effigy%', '%dragon helm%', '%triskelion%']
+                
+                
+                select_stmt = (
+                    select(activities_table)
+                    .where(
+                        (activities_table.c.activity_type == 'item drop') &
+                        (activities_table.c.status.is_(None)) &  # Retaining the logic to exclude 'exempt' and 'alerted' status
+                    )
+                    .order_by(activities_table.c.date.asc())  # Order by date descending
+                )
+                for pattern in self.excluded_texts:
+                    select_stmt = select_stmt.where(~activities_table.c.text.ilike(pattern))
+                select_stmt = select_stmt.order_by(activities_table.c.date.desc())
+
+                #select_stmt = (
+                #    select(activities_table)
+                #    .where(
+                #        (activities_table.c.activity_type == 'item drop') &
+                #        (activities_table.c.status != 'exempt') &
+                #        (
+                #            (activities_table.c.status.is_(None)) |
+                #            (activities_table.c.status != 'alerted')
+                #        ) &
+                #        (~activities_table.c.text.in_(self.excluded_texts))
+                #    )
+                #)
+                result = conn.execute(select_stmt)
+                activities = result.fetchall()
+
+                self.logger.info(f"Fetched {len(activities)} activities to alert.")
+                if len(activities) == 0:
+                    print("No drops to alert")
+
+                for activity in activities:
+                    member_name = activity.member_name
+                    description = activity.text
+                    activity_id = activity.id
+
+                    # Temporary: Echo activities to terminal for verification
+                    print(f"Alerting: @{member_name}: {description}")
+
+                    try:
+                        # Send alert to Discord
+                        message = f"@{member_name}: {description}"
+                        await channel.send(message)
+                        self.logger.info(f"Alert sent for activity ID {activity_id}.")
+
+                        # Update status to 'alerted'
+                        update_stmt = (
+                            update(activities_table)
+                            .where(activities_table.c.id == activity_id)
+                            .values(status='alerted')
+                        )
+                        conn.execute(update_stmt)
+                        self.logger.info(f"Updated status to 'alerted' for activity ID {activity_id}.")
+
+                        # Wait for 2 seconds between alerts to respect rate limits
+                        await asyncio.sleep(2)
+
+                    except Exception as e:
+                        self.logger.error(f"Failed to send alert for activity ID {activity_id}: {e}")
+
+        except SQLAlchemyError as e:
+            self.logger.error(f"Database error during alerting: {e}")
+
+    @alert_activities.before_loop
+    async def before_alert_activities(self):
+        """Called before the alert_activities loop starts."""
+        await self.bot.wait_until_ready()
+        self.alert_activities.change_interval(minutes=self.alert_interval)
+
+    def cog_unload(self):
+        """Handle cleanup when the cog is unloaded."""
+        self.alert_activities.cancel()
+
+async def setup(bot):
+    await bot.add_cog(AlertDropsCog(bot))
+

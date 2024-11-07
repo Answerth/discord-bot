@@ -1,0 +1,74 @@
+2024-11-06 00:27:31,790:INFO:discord.client: logging in using static token
+2024-11-06 00:27:32,453:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 8b5665d11566895330a4405674e36180).
+2024-11-06 00:27:34,573:INFO:cogs.clan_members.alert_drops: Fetched 0 activities to alert.
+2024-11-06 00:29:27,050:INFO:discord.client: logging in using static token
+2024-11-06 00:29:27,712:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 0a55c99295140081382001f36f3d2e55).
+2024-11-06 00:29:29,842:INFO:cogs.clan_members.alert_drops: Fetched 0 activities to alert.
+2024-11-06 00:29:29,843:ERROR:discord.ext.tasks: Unhandled exception in internal background task 'alert_activities'.
+Traceback (most recent call last):
+  File "/home/discordbeta/miniconda3/envs/discordbeta/lib/python3.12/site-packages/discord/ext/tasks/__init__.py", line 241, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/discordbeta/discordbot10s/cogs/clan_members/alert_drops.py", line 87, in alert_activities
+    if len(activites) == 0:
+           ^^^^^^^^^
+NameError: name 'activites' is not defined. Did you mean: 'activities'?
+2024-11-06 00:32:49,920:INFO:discord.client: logging in using static token
+2024-11-06 00:32:50,690:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 7ee19c608344cf7f88069e11abcdc5cb).
+2024-11-06 00:32:52,828:INFO:cogs.clan_members.alert_drops: Fetched 0 activities to alert.
+2024-11-06 00:32:52,828:ERROR:discord.ext.tasks: Unhandled exception in internal background task 'alert_activities'.
+Traceback (most recent call last):
+  File "/home/discordbeta/miniconda3/envs/discordbeta/lib/python3.12/site-packages/discord/ext/tasks/__init__.py", line 241, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/discordbeta/discordbot10s/cogs/clan_members/alert_drops.py", line 87, in alert_activities
+    if len(activites) == 0:
+           ^^^^^^^^^
+NameError: name 'activites' is not defined. Did you mean: 'activities'?
+2024-11-06 00:42:39,617 [INFO] cogs.clan_members.alert_drops: Fetched 0 activities to alert.
+2024-11-06 19:31:36,045 [INFO] cogs.clan_members.alert_drops: Fetched 0 activities to alert.
+2024-11-06 20:46:15,576 [INFO] cogs.clan_members.alert_drops: Fetched 0 activities to alert.
+2024-11-07 01:40:26,562 [INFO] cogs.clan_members.alert_drops: Fetched 0 activities to alert.
+2024-11-07 01:43:14,056 [INFO] cogs.clan_members.alert_drops: Fetched 0 activities to alert.
+2024-11-07 02:26:45,267 [INFO] cogs.clan_members.alert_drops: Fetched 0 activities to alert.
+2024-11-07 02:42:43,908 [INFO] cogs.clan_members.alert_drops: Fetched 39 activities to alert.
+2024-11-07 02:42:44,152 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 8550.
+2024-11-07 02:42:44,155 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 8550.
+2024-11-07 02:42:46,418 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 7953.
+2024-11-07 02:42:46,420 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 7953.
+2024-11-07 02:42:48,666 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 6553.
+2024-11-07 02:42:48,668 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 6553.
+2024-11-07 02:42:50,951 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 6510.
+2024-11-07 02:42:50,953 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 6510.
+2024-11-07 02:42:53,164 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 6511.
+2024-11-07 02:42:53,165 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 6511.
+2024-11-07 02:42:55,374 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 6512.
+2024-11-07 02:42:55,376 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 6512.
+2024-11-07 02:42:57,585 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 6931.
+2024-11-07 02:42:57,587 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 6931.
+2024-11-07 02:42:59,791 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 6596.
+2024-11-07 02:42:59,793 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 6596.
+2024-11-07 02:43:01,991 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 6598.
+2024-11-07 02:43:01,993 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 6598.
+2024-11-07 02:43:04,262 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 6560.
+2024-11-07 02:43:04,264 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 6560.
+2024-11-07 02:43:06,500 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 6562.
+2024-11-07 02:43:06,501 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 6562.
+2024-11-07 02:43:08,684 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 6602.
+2024-11-07 02:43:08,685 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 6602.
+2024-11-07 02:43:10,911 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 5130.
+2024-11-07 02:43:10,913 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 5130.
+2024-11-07 02:43:13,116 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 5131.
+2024-11-07 02:43:13,119 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 5131.
+2024-11-07 02:43:15,329 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 5133.
+2024-11-07 02:43:15,331 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 5133.
+2024-11-07 02:43:17,507 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 5171.
+2024-11-07 02:43:17,509 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 5171.
+2024-11-07 02:43:19,695 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 5172.
+2024-11-07 02:43:19,697 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 5172.
+2024-11-07 02:43:22,085 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 6452.
+2024-11-07 02:43:22,087 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 6452.
+2024-11-07 02:43:24,311 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 5135.
+2024-11-07 02:43:24,313 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 5135.
+2024-11-07 02:43:26,696 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 5174.
+2024-11-07 02:43:26,697 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 5174.
+2024-11-07 02:43:28,883 [INFO] cogs.clan_members.alert_drops: Alert sent for activity ID 5473.
+2024-11-07 02:43:28,885 [INFO] cogs.clan_members.alert_drops: Updated status to 'alerted' for activity ID 5473.
