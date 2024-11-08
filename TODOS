@@ -1,3 +1,6 @@
+-refactor main bot code, outsourcing command logic to its respective cog
+
+
 -ge price getter
 -- /slash command for price check that looks up item id in database, checks https://api.weirdgloop.org/exchange/history/rs/all?id=4151 for historical, and provides relevant information 
 -- WoW, MoM, YoY both price and volume

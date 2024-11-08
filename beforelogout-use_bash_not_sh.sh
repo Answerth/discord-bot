@@ -41,4 +41,4 @@ while true; do
 done
 
 # Step 4: Run Python script in the background with nohup and disown
-nohup python /home/discordbeta/discordbot10s/bot_test_include_activities_flag.py &
+nohup python /home/discordbeta/discordbot10s/bot_test_with_drop_alerter.py &

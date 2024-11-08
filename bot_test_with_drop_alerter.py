@@ -195,10 +195,56 @@ async def embed_video(interaction: discord.Interaction, link: str):
     # Send the modified link in response
     await interaction.followup.send(new_link)
 
+
+
+import random
+
+whatsup_responses = [
+    "Vibin', u?", 
+    "Skibidi bop bop 💀", 
+    "Livin' the dream 😎", 
+    "Chillin' like a villain", 
+    "Big W vibes rn", 
+    "Just rizzin' up 🌊", 
+    "On that grind, fr", 
+    "Catchin' the vibe", 
+    "Y'know, just vibin'", 
+    "Stayin' unbothered", 
+    "Out here chillaxin'", 
+    "Feelin' the drip 😤", 
+    "Same vibe, diff day", 
+    "Skrrt skrrt, u?", 
+    "In my feels, lowkey", 
+    "Ridin' the wave 🌊", 
+    "Upgraded my rizz 💯", 
+    "Keepin' it lowkey", 
+    "Mad vibez only", 
+    "Catchin' dubs today"
+]
+
+# Define the command
+#@bot.tree.command(
+#    name="whatsup",
+#    description="Responds with a random Gen Z reply to 'what's up?'"
+#)
+#async def whats_up(interaction: discord.Interaction):
+#    #await interaction.response.defer()
+#    # Choose a random response
+#    response = random.choice(whatsup_responses)
+#    # Send the chosen response
+#    await interaction.response.send_message(response)
+@bot.command(name="whatsup")
+async def whats_up_prefix(ctx):
+    """Responds with a random Gen Z reply to '!whatsup'."""
+    response = random.choice(whatsup_responses)
+    await ctx.send(response)
+
+
 # Load the alert_drops cog
 initial_extensions = [
     'cogs.clan_members.alert_drops',  # Add the new cog here
 ]
+
 
 async def load_extensions():
     for extension in initial_extensions:

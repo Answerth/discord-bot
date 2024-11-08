@@ -92,7 +92,7 @@ class AlertDropsCog(commands.Cog):
                     select(activities_table)
                     .where(
                         (activities_table.c.activity_type == 'item drop') &
-                        (activities_table.c.status.is_(None)) &  # Retaining the logic to exclude 'exempt' and 'alerted' status
+                        (activities_table.c.status.is_(None))  # Retaining the logic to exclude 'exempt' and 'alerted' status
                     )
                     .order_by(activities_table.c.date.asc())  # Order by date descending
                 )
