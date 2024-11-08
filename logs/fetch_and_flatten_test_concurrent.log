@@ -675,3 +675,96 @@
 2024-11-07 02:21:41,244 [INFO] Completed concurrent fetching of member activities.
 2024-11-07 02:21:41,249 [INFO] Data saved to /home/discordbeta/discordbot10s/./cogs/clan_members/fetch_and_flatten_data_files/members_data.pkl and /home/discordbeta/discordbot10s/./cogs/clan_members/fetch_and_flatten_data_files/activities_data.pkl
 2024-11-07 02:21:41,249 [INFO] Data insertion process completed.
+2024-11-07 23:53:15,811 [INFO] Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-07 23:53:16,617 [INFO] Fetched 85 clan members.
+2024-11-07 23:53:16,621 [INFO] Fetching activities for all members.
+2024-11-07 23:53:16,621 [INFO] Total members to fetch activities for: 85
+2024-11-07 23:53:16,622 [INFO] Starting concurrent fetching of member activities.
+2024-11-07 23:53:21,236 [INFO] Retrieved 0 activities for okho
+2024-11-07 23:53:25,318 [INFO] Retrieved 20 activities for IROneManClan
+2024-11-07 23:53:25,494 [INFO] Retrieved 20 activities for Ernxs
+2024-11-07 23:53:25,554 [INFO] Retrieved 20 activities for Titan Rex
+2024-11-07 23:53:26,164 [INFO] Retrieved 20 activities for 0verheated
+2024-11-07 23:53:26,352 [INFO] Retrieved 20 activities for Zahzr
+2024-11-07 23:53:26,406 [INFO] Retrieved 20 activities for Dash 2
+2024-11-07 23:53:26,458 [INFO] Retrieved 20 activities for Vogue
+2024-11-07 23:53:27,309 [INFO] Retrieved 20 activities for CloudGiraffe
+2024-11-07 23:53:27,722 [INFO] Retrieved 20 activities for ButtBandiit
+2024-11-07 23:53:33,009 [INFO] Retrieved 20 activities for Kicap
+2024-11-07 23:53:33,592 [INFO] Retrieved 20 activities for Fiss
+2024-11-07 23:53:33,604 [INFO] Retrieved 20 activities for Torvar95
+2024-11-07 23:53:34,050 [INFO] Retrieved 20 activities for lana rey del
+2024-11-07 23:53:34,424 [INFO] Retrieved 20 activities for Mrs Zahzr
+2024-11-07 23:53:34,430 [INFO] Retrieved 20 activities for adragonlady
+2024-11-07 23:53:34,528 [INFO] Retrieved 20 activities for bittycoins
+2024-11-07 23:53:34,562 [INFO] Retrieved 20 activities for xAbhi
+2024-11-07 23:53:35,618 [INFO] Retrieved 20 activities for SunnyBadBoy
+2024-11-07 23:53:36,574 [INFO] Retrieved 20 activities for Inpu
+2024-11-07 23:53:40,702 [INFO] Retrieved 0 activities for Gunkillsword
+2024-11-07 23:53:41,202 [INFO] Retrieved 20 activities for Resouler
+2024-11-07 23:53:41,648 [INFO] Retrieved 20 activities for xZV2
+2024-11-07 23:53:41,817 [INFO] Retrieved 20 activities for Rideswamp845
+2024-11-07 23:53:42,734 [INFO] Retrieved 20 activities for Wekill
+2024-11-07 23:53:42,880 [INFO] Retrieved 20 activities for Humans
+2024-11-07 23:53:42,884 [INFO] Retrieved 20 activities for Just Ate Out
+2024-11-07 23:53:43,670 [INFO] Retrieved 20 activities for Chibbi
+2024-11-07 23:53:46,679 [INFO] Retrieved 20 activities for Sorow91
+2024-11-07 23:53:48,383 [INFO] Retrieved 20 activities for OGsean
+2024-11-07 23:53:48,725 [INFO] Retrieved 20 activities for Baileyz
+2024-11-07 23:53:49,043 [INFO] Retrieved 20 activities for Chowenoch
+2024-11-07 23:53:49,183 [INFO] Retrieved 20 activities for Michael FK8
+2024-11-07 23:53:49,981 [INFO] Retrieved 20 activities for VR6
+2024-11-07 23:53:50,020 [INFO] Retrieved 20 activities for That1Nooob
+2024-11-07 23:53:54,272 [INFO] Retrieved 20 activities for Shiroo Ronin
+2024-11-07 23:53:54,530 [INFO] Retrieved 20 activities for Count Milo
+2024-11-07 23:53:55,199 [INFO] Retrieved 20 activities for Snugglz69
+2024-11-07 23:53:55,201 [INFO] Retrieved 20 activities for DrunkCowboy
+2024-11-07 23:53:56,099 [INFO] Retrieved 20 activities for Berdylongman
+2024-11-07 23:53:56,963 [INFO] Retrieved 0 activities for Moon Daisy
+2024-11-07 23:53:57,111 [INFO] Retrieved 0 activities for Ha Anh
+2024-11-07 23:53:57,268 [INFO] Retrieved 0 activities for Troy4770
+2024-11-07 23:53:57,662 [INFO] Retrieved 0 activities for DeliPotato
+2024-11-07 23:54:01,104 [INFO] Retrieved 20 activities for Mr Siloman
+2024-11-07 23:54:01,440 [INFO] Retrieved 20 activities for Pete Breezy
+2024-11-07 23:54:01,605 [INFO] Retrieved 20 activities for Max Drip
+2024-11-07 23:54:01,741 [INFO] Retrieved 10 activities for AceHarlequin
+2024-11-07 23:54:01,992 [INFO] Retrieved 20 activities for ItsRileyJake
+2024-11-07 23:54:02,262 [INFO] Retrieved 0 activities for XSophrosyne
+2024-11-07 23:54:04,282 [INFO] Retrieved 20 activities for Repthia
+2024-11-07 23:54:04,419 [INFO] Retrieved 20 activities for CloudPanda
+2024-11-07 23:54:04,475 [INFO] Retrieved 20 activities for Lady g33k
+2024-11-07 23:54:04,867 [INFO] Retrieved 20 activities for Yewr Screwed
+2024-11-07 23:54:09,406 [INFO] Retrieved 0 activities for NelsonM20112
+2024-11-07 23:54:09,419 [INFO] Retrieved 20 activities for Burnings
+2024-11-07 23:54:09,760 [INFO] Retrieved 20 activities for SaphirePoopy
+2024-11-07 23:54:10,134 [INFO] Retrieved 20 activities for Camachinator
+2024-11-07 23:54:10,389 [INFO] Retrieved 20 activities for 420Outkast
+2024-11-07 23:54:11,635 [INFO] Retrieved 0 activities for sorjaibear91
+2024-11-07 23:54:16,326 [INFO] Retrieved 0 activities for bioshiok
+2024-11-07 23:54:16,382 [INFO] Retrieved 0 activities for koin01
+2024-11-07 23:54:16,401 [INFO] Retrieved 0 activities for Rengokuman
+2024-11-07 23:54:16,577 [INFO] Retrieved 10 activities for Ernis x_x
+2024-11-07 23:54:16,587 [INFO] Retrieved 0 activities for Elven_Arwen1
+2024-11-07 23:54:16,743 [INFO] Retrieved 20 activities for UhtredKing
+2024-11-07 23:54:17,518 [INFO] Retrieved 20 activities for Brintny10
+2024-11-07 23:54:17,719 [INFO] Retrieved 20 activities for swamybammy
+2024-11-07 23:54:17,787 [INFO] Retrieved 20 activities for Klauthion
+2024-11-07 23:54:19,040 [INFO] Retrieved 20 activities for TTV Undraz
+2024-11-07 23:54:23,291 [INFO] Retrieved 20 activities for One Is Jesus
+2024-11-07 23:54:23,781 [INFO] Retrieved 20 activities for Jabib
+2024-11-07 23:54:24,445 [INFO] Retrieved 20 activities for Sharxio
+2024-11-07 23:54:24,503 [INFO] Retrieved 20 activities for Cronochin
+2024-11-07 23:54:24,648 [INFO] Retrieved 20 activities for Puma1
+2024-11-07 23:54:25,160 [INFO] Retrieved 20 activities for MeatyMark
+2024-11-07 23:54:26,438 [INFO] Retrieved 20 activities for YeshuaWins
+2024-11-07 23:54:26,480 [INFO] Retrieved 20 activities for Kaiilua
+2024-11-07 23:54:26,516 [INFO] Retrieved 20 activities for KaliFuries
+2024-11-07 23:54:30,472 [INFO] Retrieved 20 activities for Sabre Taser
+2024-11-07 23:54:30,974 [INFO] Retrieved 20 activities for Japouu
+2024-11-07 23:54:31,018 [INFO] Retrieved 20 activities for Jesus Rules3
+2024-11-07 23:54:31,418 [INFO] Retrieved 20 activities for Troubles933
+2024-11-07 23:54:32,174 [INFO] Retrieved 0 activities for Lady Spam
+2024-11-07 23:54:32,730 [INFO] Retrieved 0 activities for Lady Alt1
+2024-11-07 23:54:32,733 [INFO] Completed concurrent fetching of member activities.
+2024-11-07 23:54:32,743 [INFO] Data saved to /home/discordbeta/discordbot10s/./cogs/clan_members/fetch_and_flatten_data_files/members_data.pkl and /home/discordbeta/discordbot10s/./cogs/clan_members/fetch_and_flatten_data_files/activities_data.pkl
+2024-11-07 23:54:32,744 [INFO] Data insertion process completed.

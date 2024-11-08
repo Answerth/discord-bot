@@ -26,6 +26,36 @@ Drop alerter:
 ---Digest: all unclassified activities for review
 ---Select non-exempt items, Alert, mark alerted in database, wait within rate limits, alert next, repeat
 
+
+-/rsn signup module
+-associates discord user id with rns(s)
+-used for drop alerting, event alerting, etc
+-works with discord nick change detector / rsn name change detector
+
+drop alerter changes: 
+-refer instead of all to /rsn signup table
+-if activity name matches with anyone in the rsn.rsn field, tag @associated_discord_user
+--- discord id / nickname storage | discord members table -> /rsn stores discord id , rsn's 
+--- rsn name updater updartes clan members rsn and any matching rsns in /rsn table(?)
+SCRAPPED:  alternatively, if clan members get a unique id, rsn updater updates userid name, /rsn stores discord id, and if any rsns match members name, store unique id, doesnt work for non-clan memebers, too much maintenence to automate
+
+
+-rsn updatedr / activitiy hasher
+
+- discord id + name/nickname store and check for updated name/nick
+----
+/rsn table
+/members table
+/discordusers table
+
+updater for rsn + members table
+updater for discord table 
+drop log alerter references rsn tablle to see if rsn found -> alerts drop 
+-----
+
+-/raffle get all people who capped this week, remove discord users in role staff
+
+
 -Bonus: in bot testing channel, @ all clan members to see which ones are not properly tagged
 
 DXP leaderboard:
@@ -55,6 +85,10 @@ Item Drop histories:
 -investigate world60pengs.com tool
 
 -create generic modules for database updaters, discord alerters, file posters, form creators and the like
+
+
+- admin tools ie !admin
+-- !getroles - list all roles and people in a given role
 
 
 //// OLD:
