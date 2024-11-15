@@ -4,7 +4,16 @@
 source ~/miniconda3/etc/profile.d/conda.sh
 
 # Step 1: Backup the Conda environment
-conda env export > ./env/environment_$(date +%Y-%m-%d).yaml
+dir=~/discordbot10s/env
+filename="environment_$(date +%Y-%m-%d).yaml"
+
+if conda env export > "$dir/$filename"; then
+  echo "Success: File successfully created at $dir/$filename"
+else
+  echo "Error: Failed to create the backup file."
+fi
+
+# old: conda env export > ~/discordbot10s/env/environment_$(date +%Y-%m-%d).yaml
 
 # Step 2: Display Git status
 cd /home/discordbeta/discordbot10s
