@@ -22,10 +22,9 @@ logging.basicConfig(
 )
 
 # Constants
-CONCURRENT_REQUESTS = 10  # Adjust based on your requirements
+CONCURRENT_REQUESTS = 10
 REQUEST_TIMEOUT = 120  # seconds
 
-# Define SKILLS and ACTIVITIES as before
 SKILLS = [
     "Overall", "Attack", "Defence", "Strength", "Constitution", "Ranged", "Prayer",
     "Magic", "Cooking", "Woodcutting", "Fletching", "Fishing", "Firemaking", "Crafting",
@@ -45,7 +44,6 @@ ACTIVITIES = [
     "Clue Scrolls Elite", "Clue Scrolls Master"
 ]
 
-# Experience dictionaries as before
 level_exp_dict = {
     1: 0, 2: 83, 3: 174, 4: 276, 5: 388, 6: 512, 7: 650, 8: 801, 9: 969, 10: 1154,
     11: 1358, 12: 1584, 13: 1833, 14: 2107, 15: 2411, 16: 2746, 17: 3115, 18: 3523, 19: 3973, 20: 4470,
