@@ -47,7 +47,6 @@ ACTIVITIES = [
 
 # Experience dictionaries as before
 level_exp_dict = {
-    # ... [Same as your original level_exp_dict] ...
     1: 0, 2: 83, 3: 174, 4: 276, 5: 388, 6: 512, 7: 650, 8: 801, 9: 969, 10: 1154,
     11: 1358, 12: 1584, 13: 1833, 14: 2107, 15: 2411, 16: 2746, 17: 3115, 18: 3523, 19: 3973, 20: 4470,
     21: 5018, 22: 5624, 23: 6291, 24: 7028, 25: 7842, 26: 8740, 27: 9730, 28: 10824, 29: 12031, 30: 13363,
@@ -63,7 +62,6 @@ level_exp_dict = {
 }
 
 elite_skills_exp = {
-    # ... [Same as your original elite_skills_exp] ...
     1: 0, 2: 830, 3: 1861, 4: 2902, 5: 3980, 6: 5126, 7: 6390, 8: 7787, 9: 9400, 10: 11275,
     11: 13605, 12: 16372, 13: 19656, 14: 23546, 15: 28138, 16: 33520, 17: 39809, 18: 47109, 19: 55535, 20: 64802,
     21: 77190, 22: 90811, 23: 106221, 24: 123573, 25: 143025, 26: 164742, 27: 188893, 28: 215651, 29: 245196, 30: 277713,
@@ -261,7 +259,7 @@ def save_to_csv(data, filename='formatted_skill_data_cron.csv'):
         logging.info(f"Created and saved data to {filename}.")
 
 def main():
-    clan_name = "10s"  # Replace with your clan name
+    clan_name = "10s" 
     start_time = time.time()
 
     # Fetch clan members
@@ -279,11 +277,11 @@ def main():
     except RuntimeError as e:
         # Handle the event loop already running error (e.g., in Jupyter)
         logging.error(f"RuntimeError occurred: {e}")
-        # If using Jupyter, you can alternatively use nest_asyncio
+        # If using Jupyter, use nest_asyncio
         # Uncomment the following lines if running in Jupyter
         # import nest_asyncio
         # nest_asyncio.apply()
-        # fetched_data, skipped = asyncio.run(fetch_all_player_stats(member_names))        
+        # fetched_data, skipped = asyncio.run(fetch_all_player_stats(member_names))
         return
 
     # Save fetched data to CSV
