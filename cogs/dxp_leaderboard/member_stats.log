@@ -1,0 +1,95 @@
+2024-11-15 02:58:33,921 - INFO - Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-15 03:00:49,643 - INFO - Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-15 03:03:54,061 - INFO - Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-15 03:03:54,787 - INFO - Fetched 86 clan members.
+2024-11-15 03:03:54,796 - INFO - Total members to fetch stats for: 86
+2024-11-15 03:03:55,476 - ERROR - ERROR - HTTP error occurred for okho: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=okho
+2024-11-15 03:03:55,483 - ERROR - ERROR - HTTP error occurred for Ernxs: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Ernxs
+2024-11-15 03:03:56,676 - ERROR - ERROR - HTTP error occurred for Wekill: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Wekill
+2024-11-15 03:03:57,227 - ERROR - ERROR - HTTP error occurred for Count Milo: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Count%20Milo
+2024-11-15 03:03:57,731 - ERROR - ERROR - HTTP error occurred for DeliPotato: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=DeliPotato
+2024-11-15 03:03:57,784 - ERROR - ERROR - HTTP error occurred for Troy4770: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Troy4770
+2024-11-15 03:03:58,383 - ERROR - ERROR - HTTP error occurred for NelsonM20112: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=NelsonM20112
+2024-11-15 03:03:58,880 - ERROR - ERROR - HTTP error occurred for 420Outkast: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=420Outkast
+2024-11-15 03:04:04,012 - ERROR - ERROR - HTTP error occurred for Lady Alt1: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Lady%20Alt1
+2024-11-15 03:04:04,014 - INFO - Successfully fetched stats for 77 members.
+2024-11-15 03:04:04,015 - INFO - Skipped 9 members due to errors.
+2024-11-15 03:04:04,083 - INFO - Created and saved data to formatted_skill_data.csv.
+2024-11-15 03:04:04,083 - INFO - Script completed in 10.02 seconds.
+2024-11-15 03:04:04,088 - INFO - Skipped members: ['Ernxs', 'okho', 'Wekill', 'Count Milo', 'DeliPotato', 'Troy4770', 'NelsonM20112', '420Outkast', 'Lady Alt1']
+2024-11-15 03:08:58,545 - INFO - Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-15 03:08:59,208 - INFO - Fetched 86 clan members.
+2024-11-15 03:08:59,211 - INFO - Total members to fetch stats for: 86
+2024-11-15 03:08:59,951 - ERROR - ERROR - HTTP error occurred for Ernxs: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Ernxs
+2024-11-15 03:08:59,961 - ERROR - ERROR - HTTP error occurred for okho: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=okho
+2024-11-15 03:09:01,514 - ERROR - ERROR - HTTP error occurred for Wekill: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Wekill
+2024-11-15 03:09:02,108 - ERROR - ERROR - HTTP error occurred for Count Milo: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Count%20Milo
+2024-11-15 03:09:02,849 - ERROR - ERROR - HTTP error occurred for DeliPotato: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=DeliPotato
+2024-11-15 03:11:47,150 - INFO - Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-15 03:11:49,345 - INFO - Fetched 86 clan members.
+2024-11-15 03:11:49,351 - INFO - Total members to fetch stats for: 86
+2024-11-15 03:11:49,996 - ERROR - ERROR - HTTP error occurred for okho: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=okho
+2024-11-15 03:11:50,013 - ERROR - ERROR - HTTP error occurred for Ernxs: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Ernxs
+2024-11-15 03:11:51,150 - ERROR - ERROR - HTTP error occurred for Wekill: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Wekill
+2024-11-15 03:11:51,651 - ERROR - ERROR - HTTP error occurred for Count Milo: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Count%20Milo
+2024-11-15 03:11:52,218 - ERROR - ERROR - HTTP error occurred for DeliPotato: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=DeliPotato
+2024-11-15 03:11:52,257 - ERROR - ERROR - HTTP error occurred for Troy4770: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Troy4770
+2024-11-15 03:11:52,938 - ERROR - ERROR - HTTP error occurred for NelsonM20112: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=NelsonM20112
+2024-11-15 03:11:53,459 - ERROR - ERROR - HTTP error occurred for 420Outkast: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=420Outkast
+2024-11-15 03:11:54,925 - ERROR - ERROR - HTTP error occurred for Lady Alt1: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Lady%20Alt1
+2024-11-15 03:11:54,968 - INFO - Successfully fetched stats for 77 members.
+2024-11-15 03:11:54,968 - INFO - Skipped 9 members due to errors.
+2024-11-15 03:11:54,994 - INFO - Created and saved data to formatted_skill_data_cron.csv.
+2024-11-15 03:11:54,995 - INFO - Script completed in 7.85 seconds.
+2024-11-15 03:11:54,995 - INFO - Skipped members: ['Ernxs', 'okho', 'Wekill', 'Count Milo', 'DeliPotato', 'Troy4770', 'NelsonM20112', '420Outkast', 'Lady Alt1']
+2024-11-15 03:14:44,635 - INFO - Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-15 03:14:45,348 - INFO - Fetched 86 clan members.
+2024-11-15 03:14:45,350 - INFO - Total members to fetch stats for: 86
+2024-11-15 03:14:45,936 - ERROR - ERROR - HTTP error occurred for Ernxs: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Ernxs
+2024-11-15 03:14:45,937 - ERROR - ERROR - HTTP error occurred for okho: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=okho
+2024-11-15 03:14:47,033 - ERROR - ERROR - HTTP error occurred for Wekill: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Wekill
+2024-11-15 03:14:47,534 - ERROR - ERROR - HTTP error occurred for Count Milo: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Count%20Milo
+2024-11-15 03:14:48,131 - ERROR - ERROR - HTTP error occurred for DeliPotato: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=DeliPotato
+2024-11-15 03:14:48,186 - ERROR - ERROR - HTTP error occurred for Troy4770: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Troy4770
+2024-11-15 03:14:48,785 - ERROR - ERROR - HTTP error occurred for NelsonM20112: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=NelsonM20112
+2024-11-15 03:14:49,184 - ERROR - ERROR - HTTP error occurred for 420Outkast: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=420Outkast
+2024-11-15 03:14:50,392 - ERROR - ERROR - HTTP error occurred for Lady Alt1: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Lady%20Alt1
+2024-11-15 03:14:50,394 - INFO - Successfully fetched stats for 77 members.
+2024-11-15 03:14:50,395 - INFO - Skipped 9 members due to errors.
+2024-11-15 03:14:50,416 - INFO - Appended data to formatted_skill_data_cron.csv.
+2024-11-15 03:14:50,417 - INFO - Script completed in 5.78 seconds.
+2024-11-15 03:14:50,417 - INFO - Skipped members: ['Ernxs', 'okho', 'Wekill', 'Count Milo', 'DeliPotato', 'Troy4770', 'NelsonM20112', '420Outkast', 'Lady Alt1']
+2024-11-15 03:21:04,044 - INFO - Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-15 03:21:04,044 - INFO - Fetching clan members from URL: http://services.runescape.com/m=clan-hiscores/members_lite.ws?clanName=10s
+2024-11-15 03:21:04,747 - INFO - Fetched 86 clan members.
+2024-11-15 03:21:04,747 - INFO - Fetched 86 clan members.
+2024-11-15 03:21:04,750 - INFO - Total members to fetch stats for: 86
+2024-11-15 03:21:04,750 - INFO - Total members to fetch stats for: 86
+2024-11-15 03:21:05,367 - ERROR - ERROR - HTTP error occurred for okho: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=okho
+2024-11-15 03:21:05,367 - ERROR - ERROR - HTTP error occurred for okho: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=okho
+2024-11-15 03:21:05,369 - ERROR - ERROR - HTTP error occurred for Ernxs: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Ernxs
+2024-11-15 03:21:05,369 - ERROR - ERROR - HTTP error occurred for Ernxs: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Ernxs
+2024-11-15 03:21:06,478 - ERROR - ERROR - HTTP error occurred for Wekill: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Wekill
+2024-11-15 03:21:06,478 - ERROR - ERROR - HTTP error occurred for Wekill: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Wekill
+2024-11-15 03:21:07,078 - ERROR - ERROR - HTTP error occurred for Count Milo: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Count%20Milo
+2024-11-15 03:21:07,078 - ERROR - ERROR - HTTP error occurred for Count Milo: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Count%20Milo
+2024-11-15 03:21:07,627 - ERROR - ERROR - HTTP error occurred for DeliPotato: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=DeliPotato
+2024-11-15 03:21:07,627 - ERROR - ERROR - HTTP error occurred for DeliPotato: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=DeliPotato
+2024-11-15 03:21:07,781 - ERROR - ERROR - HTTP error occurred for Troy4770: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Troy4770
+2024-11-15 03:21:07,781 - ERROR - ERROR - HTTP error occurred for Troy4770: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Troy4770
+2024-11-15 03:21:08,384 - ERROR - ERROR - HTTP error occurred for NelsonM20112: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=NelsonM20112
+2024-11-15 03:21:08,384 - ERROR - ERROR - HTTP error occurred for NelsonM20112: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=NelsonM20112
+2024-11-15 03:21:08,629 - ERROR - ERROR - HTTP error occurred for 420Outkast: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=420Outkast
+2024-11-15 03:21:08,629 - ERROR - ERROR - HTTP error occurred for 420Outkast: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=420Outkast
+2024-11-15 03:21:09,957 - ERROR - ERROR - HTTP error occurred for Lady Alt1: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Lady%20Alt1
+2024-11-15 03:21:09,957 - ERROR - ERROR - HTTP error occurred for Lady Alt1: 404 Client Error: Not found for url: https://secure.runescape.com/m=hiscore/index_lite.ws?player=Lady%20Alt1
+2024-11-15 03:21:09,978 - INFO - Successfully fetched stats for 77 members.
+2024-11-15 03:21:09,978 - INFO - Successfully fetched stats for 77 members.
+2024-11-15 03:21:09,978 - INFO - Skipped 9 members due to errors.
+2024-11-15 03:21:09,978 - INFO - Skipped 9 members due to errors.
+2024-11-15 03:21:10,001 - INFO - Appended data to formatted_skill_data_cron.csv.
+2024-11-15 03:21:10,001 - INFO - Appended data to formatted_skill_data_cron.csv.
+2024-11-15 03:21:10,002 - INFO - Script completed in 5.96 seconds.
+2024-11-15 03:21:10,002 - INFO - Script completed in 5.96 seconds.
+2024-11-15 03:21:10,002 - INFO - Skipped members: ['Ernxs', 'okho', 'Wekill', 'Count Milo', 'DeliPotato', 'Troy4770', 'NelsonM20112', '420Outkast', 'Lady Alt1']
+2024-11-15 03:21:10,002 - INFO - Skipped members: ['Ernxs', 'okho', 'Wekill', 'Count Milo', 'DeliPotato', 'Troy4770', 'NelsonM20112', '420Outkast', 'Lady Alt1']

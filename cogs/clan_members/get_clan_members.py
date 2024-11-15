@@ -17,7 +17,7 @@ def fetch_clan_members(clan_name):
             "experience": int(experience),
             "kills": int(kills)
         })
-    print(members)
+    #print(members)
     return members
 
 def get_member_activities(member_name, number_of_activities = 5):
@@ -33,7 +33,6 @@ def get_member_activities(member_name, number_of_activities = 5):
     # Extract 'name' and 'activities', handle missing 'activities' gracefully
     name = data.get("name", member_name)
     activities = data.get("activities", [])
-
     # Filter activities to include only those within the last 30 days
     recent_activities = []
     for activity in activities:
@@ -44,14 +43,14 @@ def get_member_activities(member_name, number_of_activities = 5):
 
         #if len(recent_activities) >= 10:
         #    break
-
+    print(recent_activities)
     return {
         "name": name,
         "activities": recent_activities
     }
 
 
-#fetch_clan_members("10s")
-#member_activity = get_member_activities("ButtBandiit")
+fetch_clan_members("10s")
+member_activity = get_member_activities("Vogue")
 #print(member_activity) 
 
